@@ -1,0 +1,24 @@
+<div class="navContainer">
+  <nav [ngClass]="isScrolled? 'scrolled' : ''">
+    <button class="hamMenu" (click)="toggleNav()">
+      <i class="material-icons-round">menu</i>
+    </button>
+    <div [ngClass]="isNavbarClosed? '' : 'show'">
+      <a href="">
+        <span>Contact</span>
+      </a>
+      <a href="">
+        <span>Projects</span>
+      </a>
+      <a href="">
+        <span>About Me</span>
+      </a>
+      <button>
+        <span>Theme</span>
+      </button>
+      <!-- <button>
+        <i class="material-icons-round">contrast</i>
+      </button> -->
+    </div>
+  </nav>
+</div>

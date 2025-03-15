@@ -1,1 +1,289 @@
-/* You can add global styles to this file, and also import other style files */
+/* .light {
+  --bg: #f8f9fa;
+  --bg2: #e9ecef;
+
+  --border: #dee2e6;
+  --hover: #EFF2F5;
+
+  --font: #212529;
+  --font2: #4e565f;
+  --main: #ff8f72;
+  --accent: #b5cb9b;
+
+  --blue: #2bc0ff;
+  --red: #ff302c;
+  --green: #80e73b;
+} */
+
+:root {
+  --bg: #272727;
+  --bg2: #1a1a1a;
+
+  --font: #f8f9fa;
+  --font2: #cbcfd3;
+  --main: #ff5328;
+  --murray: #ff4d74;
+  --transparent: #26262647;
+
+  --blue: #2bc0ff;
+  --red: #ff302c;
+  --green: #80e73b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--font);
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+}
+
+.gap8 {
+  gap: 8px;
+}
+
+.pageContainer {
+  max-width: 960px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.winCol {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.win {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.winBg {
+  padding: 12px;
+  background-color: var(--bg2);
+  border-radius: 35px;
+}
+
+.wsm {
+  width: 320px;
+}
+
+.wmd {
+  width: 408px;
+}
+
+.wlg {
+  width: 660px;
+}
+
+.center {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jcBtw {
+  justify-content: space-between;
+}
+
+.gap6 {
+  gap: 6px;
+}
+
+.pageTitle {
+  margin: 32px 0;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mAuto {
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  display: block;
+}
+
+span,
+p {
+  font-size: 1.8rem;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  font-size: 1.8rem;
+  border-style: none;
+  text-decoration: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+button,
+a {
+  padding: 6px 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--bg2);
+  position: relative;
+}
+
+button span, a span {
+  font-size: 1.5rem;
+}
+
+/* button:hover,
+a:hover {
+  background-color: var(--hover);
+} */
+
+.wFit {
+  width: fit-content;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.hFull {
+  height: 100%;
+}
+
+.p18 {
+  padding: 18px;
+}
+
+input {
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.material-icons-round {
+  font-size: 2rem;
+}
+
+.aItems {
+  align-items: center;
+}
+
+.rounded {
+  border-radius: 99px;
+}
+
+.outline {
+  border: solid 1px var(--font);
+}
+
+.active {
+  background-color: var(--bg2);
+}
+
+.active:hover {
+  background-color: var(--bg2);
+}
+
+.accent {
+  background-color: var(--font);
+}
+
+.accent span, .accent i {
+  color: var(--bg2);
+}
+
+.softTxt {
+  color: var(--font2);
+}
+
+.mAutoY {
+  margin: auto 0;
+}
+
+hr {
+  height: 32px;
+  border-style: none;
+}
+
+.mat-mdc-dialog-surface {
+  padding: 12px !important;
+  background-color: var(--bg) !important;
+  border-radius: 12px !important;
+}
+
+.onlySvg {
+  padding: 6px;
+}
+
+@media (min-width: 600px) {
+  span, i {
+    font-size: 2rem;
+  }
+
+  button span, a span, button i, a i {
+    font-size: 2rem;
+  }
+
+  .onlySvg svg {
+    width: 30px;
+    height: 30px;
+  }
+}

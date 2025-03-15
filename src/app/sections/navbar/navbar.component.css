@@ -1,0 +1,85 @@
+.navContainer {
+  width: 100vw;
+  position: relative;
+}
+
+nav {
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+
+  z-index: 50;
+}
+
+nav button,
+nav a {
+  background-color: transparent;
+}
+
+a {
+  border-radius: 0;
+}
+
+nav button:hover,
+nav a:hover {
+  background-color: var(--bg2);
+}
+
+.hamMenu {
+  position: absolute;
+  margin-left: auto;
+  right: 0;
+  z-index: 50;
+}
+
+.hamMenu i {
+  font-size: 3rem;
+}
+
+nav .show {
+  display: block;
+  opacity: 100%;
+  top: 0;
+  transition: all ease .3s;
+}
+
+nav div {
+  position: relative;
+  top: -300px;
+  transition: all ease .3s;
+  opacity: 0%;
+
+  background: var(--transparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 600px) {
+  .hamMenu {
+    display: none;
+  }
+
+  nav div {
+    padding: 8px;
+    top: 0;
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    border-style: none;
+    box-shadow: none;
+  }
+
+  .scrolled {
+    border-bottom: 1px solid #cccccc54;
+  }
+
+  button, a {
+    border-radius: 4px;
+  }
+}
