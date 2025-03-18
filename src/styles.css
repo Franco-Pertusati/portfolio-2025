@@ -71,9 +71,11 @@ body {
 }
 
 .winBg {
-  padding: 12px;
-  background-color: var(--bg2);
-  border-radius: 35px;
+  padding: 8px;
+  background-color: var(--bg);
+  border-radius: 8px;
+  border: solid 1px var(--bg2);
+  box-shadow: 0 4px 12px hsla(0, 0%, 11%, 0.5);
 }
 
 .wsm {
@@ -151,7 +153,7 @@ img {
 }
 
 span,
-p {
+p, label {
   font-size: 1.8rem;
 }
 
@@ -174,10 +176,10 @@ textarea {
 }
 
 button,
-a {
+a, label {
   padding: 6px 10px;
   display: flex;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
   border-radius: 4px;
   cursor: pointer;

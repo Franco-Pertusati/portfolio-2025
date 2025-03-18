@@ -3,22 +3,40 @@
     <button class="hamMenu" (click)="toggleNav()">
       <i class="material-icons-round">menu</i>
     </button>
-    <div [ngClass]="isNavbarClosed? '' : 'show'">
-      <a href="">
-        <span>Contact</span>
-      </a>
+    <ul [ngClass]="isNavbarClosed? '' : 'show'">
+      <input type="checkbox" class="reveal-btn" id="toggle">
+      <label for="toggle" class="reveal-label">Contact</label>
+      <div class="navHidenCont">
+        <a href="">Github</a>
+        <a href="">LinkedIn</a>
+        <a href="">E-Mail</a>
+      </div>
       <a href="">
         <span>Projects</span>
       </a>
       <a href="">
         <span>About Me</span>
       </a>
-      <button>
+      <button class="themeBtn">
+        <i class="material-icons-round">contrast</i>
         <span>Theme</span>
       </button>
-      <!-- <button>
-        <i class="material-icons-round">contrast</i>
-      </button> -->
+    </ul>
+    <div class="extraContainer">
+      <div class="optnList winBg">
+        <button>
+          <i class="material-icons-round">dark_mode</i>
+          <span>Dark</span>
+        </button>
+        <button>
+          <i class="material-icons-round">light_mode</i>
+          <span>Light</span>
+        </button>
+        <button>
+          <i class="material-icons-round">desktop_windows</i>
+          <span>System</span>
+        </button>
+      </div>
     </div>
   </nav>
 </div>

@@ -21,10 +21,6 @@
   z-index: inherit;
 }
 
-a {
-  border: solid 1px var(--bg);
-}
-
 .titleContainer {
   z-index: 20;
 }
@@ -48,7 +44,19 @@ h2 {
   z-index: 20;
 }
 
+a {
+  transition: all ease .2s;
+  border: solid 1px var(--bg);
+}
 
+a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px -12px var(--font2);
+}
+
+.accent {
+  border: solid 1px var(--font);
+}
 
 @media (min-width: 600px) {
   h1 {
