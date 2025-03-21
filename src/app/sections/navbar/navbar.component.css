@@ -10,12 +10,12 @@ nav {
   background-color: transparent;
   display: flex;
   flex-direction: column;
-
   z-index: 50;
 }
 
 nav button,
-nav a, label {
+nav a,
+label {
   background-color: transparent;
 }
 
@@ -55,7 +55,6 @@ nav ul {
   top: -300px;
   transition: all ease .3s;
   opacity: 0%;
-
   background: var(--transparent);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -71,23 +70,8 @@ nav ul {
   display: none;
 }
 
-.reveal-btn {
+.hiddenCont {
   display: none;
-}
-
-/* Contenido oculto inicialmente */
-.navHidenCont {
-  display: none;
-}
-
-.navHidenCont a {
-  font-size: 1.5rem;
-  padding-left: 24px;
-}
-
-/* Cuando el checkbox está marcado, muestra el contenido */
-.reveal-btn:checked + .reveal-label + .navHidenCont {
-  display: block;
 }
 
 @media (min-width: 600px) {
@@ -115,10 +99,7 @@ nav ul {
     border-radius: 4px;
   }
 
-  .optnList {
+  .swBtn:hover .hiddenCont {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 38px;
   }
 }

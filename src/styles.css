@@ -1,26 +1,31 @@
-/* .light {
+:root {
   --bg: #f8f9fa;
-  --bg2: #e9ecef;
+  --bg1: #dee3e9;
+  --bg2: #c3c9cf;
 
-  --border: #dee2e6;
-  --hover: #EFF2F5;
+  --font: #1a1a1a;
+  --font2: #272727;
+  --font3: #585858;
 
-  --font: #212529;
-  --font2: #4e565f;
-  --main: #ff8f72;
-  --accent: #b5cb9b;
+  --main: #ff5328;
+  --murray: #ff4d74;
+  --transparent: #f8f9fa81;
 
   --blue: #2bc0ff;
   --red: #ff302c;
   --green: #80e73b;
-} */
 
-:root {
+  --gridBg: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 2000 1400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cmask id=%22b%22 x=%220%22 y=%220%22 width=%222000%22 height=%221400%22%3E%3Cpath fill=%22url(%23a)%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3C%2Fmask%3E%3Cpath fill=%22%23e9ecef%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cg style=%22transform-origin:center center%22 stroke=%22%23dee2e6%22 stroke-width=%222%22 fill=%22none%22 mask=%22url(%23b)%22%3E%3Cpath d=%22M0 0h200v200H0zM200 0h200v200H200zM400 0h200v200H400zM600 0h200v200H600zM800 0h200v200H800zM1000 0h200v200h-200zM1200 0h200v200h-200zM1400 0h200v200h-200zM1600 0h200v200h-200zM1800 0h200v200h-200zM0 200h200v200H0zM200 200h200v200H200zM400 200h200v200H400zM600 200h200v200H600zM800 200h200v200H800zM1000 200h200v200h-200zM1200 200h200v200h-200zM1400 200h200v200h-200zM1600 200h200v200h-200zM1800 200h200v200h-200zM0 400h200v200H0zM200 400h200v200H200zM400 400h200v200H400zM600 400h200v200H600zM800 400h200v200H800zM1000 400h200v200h-200zM1200 400h200v200h-200zM1400 400h200v200h-200zM1600 400h200v200h-200zM1800 400h200v200h-200zM0 600h200v200H0zM200 600h200v200H200zM400 600h200v200H400zM600 600h200v200H600zM800 600h200v200H800zM1000 600h200v200h-200zM1200 600h200v200h-200zM1400 600h200v200h-200zM1600 600h200v200h-200zM1800 600h200v200h-200zM0 800h200v200H0zM200 800h200v200H200zM400 800h200v200H400zM600 800h200v200H600zM800 800h200v200H800zM1000 800h200v200h-200zM1200 800h200v200h-200zM1400 800h200v200h-200zM1600 800h200v200h-200zM1800 800h200v200h-200zM0 1000h200v200H0zM200 1000h200v200H200zM400 1000h200v200H400zM600 1000h200v200H600zM800 1000h200v200H800zM1000 1000h200v200h-200zM1200 1000h200v200h-200zM1400 1000h200v200h-200zM1600 1000h200v200h-200zM1800 1000h200v200h-200zM0 1200h200v200H0zM200 1200h200v200H200zM400 1200h200v200H400zM600 1200h200v200H600zM800 1200h200v200H800zM1000 1200h200v200h-200zM1200 1200h200v200h-200zM1400 1200h200v200h-200zM1600 1200h200v200h-200zM1800 1200h200v200h-200z%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CradialGradient id=%22a%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22%2F%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
+}
+
+/* :root {
   --bg: #272727;
   --bg2: #1a1a1a;
 
   --font: #f8f9fa;
   --font2: #cbcfd3;
+  --font3: #aaa9a9;
+
   --main: #ff5328;
   --murray: #ff4d74;
   --transparent: #26262647;
@@ -28,7 +33,7 @@
   --blue: #2bc0ff;
   --red: #ff302c;
   --green: #80e73b;
-}
+} */
 
 * {
   margin: 0;
@@ -88,6 +93,10 @@ body {
 
 .wlg {
   width: 660px;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.2);
 }
 
 .center {
@@ -153,8 +162,13 @@ img {
 }
 
 span,
-p, label {
+p,
+label {
   font-size: 1.8rem;
+}
+
+label {
+  font-size: 1.5rem;
 }
 
 small {
@@ -176,7 +190,8 @@ textarea {
 }
 
 button,
-a, label {
+a,
+label {
   padding: 6px 10px;
   display: flex;
   gap: 8px;
@@ -187,7 +202,8 @@ a, label {
   position: relative;
 }
 
-button span, a span {
+button span,
+a span {
   font-size: 1.5rem;
 }
 
@@ -248,7 +264,8 @@ input:focus {
   background-color: var(--font);
 }
 
-.accent span, .accent i {
+.accent span,
+.accent i {
   color: var(--bg2);
 }
 
@@ -261,8 +278,9 @@ input:focus {
 }
 
 hr {
-  height: 32px;
   border-style: none;
+  border-bottom: solid 1px var(--font3);
+  mask-image: linear-gradient(90deg, rgba(34, 193, 195, 0) 0%, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.85) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 .mat-mdc-dialog-surface {
@@ -276,11 +294,17 @@ hr {
 }
 
 @media (min-width: 600px) {
-  span, i {
+
+  span,
+  i,
+  label {
     font-size: 2rem;
   }
 
-  button span, a span, button i, a i {
+  button span,
+  a span,
+  button i,
+  a i {
     font-size: 2rem;
   }
 

@@ -4,9 +4,10 @@
   border-radius: 99px;
   position: relative;
   z-index: 20;
+  background-color: transparent;
 }
 
-.selected {
+.projectsNavbar .selected {
   background-color: var(--font);
   position: relative;
 }
@@ -51,6 +52,7 @@ h2 {
   overflow: hidden;
   margin: 0 auto;
   z-index: 30;
+  background-color: var(--bg1);
 }
 
 .projectsNavbar i {

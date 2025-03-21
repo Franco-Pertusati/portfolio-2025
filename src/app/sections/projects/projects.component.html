@@ -1,6 +1,6 @@
 <div class="projectsContainer">
   <h2>Main projects</h2>
-  <div class="projectsNavbar">
+  <div class="projectsNavbar shadow">
     @for (p of projects; track $index) {
     <button (click)="selectProject($index)" [ngClass]="selectedProject.title === p.title? 'selected' : ''">
       <span>{{ p.title }}</span>

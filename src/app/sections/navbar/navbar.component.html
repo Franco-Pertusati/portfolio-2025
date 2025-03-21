@@ -4,39 +4,36 @@
       <i class="material-icons-round">menu</i>
     </button>
     <ul [ngClass]="isNavbarClosed? '' : 'show'">
-      <input type="checkbox" class="reveal-btn" id="toggle">
-      <label for="toggle" class="reveal-label">Contact</label>
-      <div class="navHidenCont">
-        <a href="">Github</a>
-        <a href="">LinkedIn</a>
-        <a href="">E-Mail</a>
+      <div style="position: relative;">
+        <button>
+          <span>Social</span>
+        </button>
       </div>
+      <hr>
       <a href="">
         <span>Projects</span>
       </a>
+      <hr>
       <a href="">
         <span>About Me</span>
       </a>
-      <button class="themeBtn">
-        <i class="material-icons-round">contrast</i>
-        <span>Theme</span>
-      </button>
-    </ul>
-    <div class="extraContainer">
-      <div class="optnList winBg">
-        <button>
-          <i class="material-icons-round">dark_mode</i>
-          <span>Dark</span>
+      <hr>
+      <div style="position: relative;">
+        <button class="swBtn">
+          <span>Theme</span>
         </button>
-        <button>
-          <i class="material-icons-round">light_mode</i>
-          <span>Light</span>
-        </button>
-        <button>
-          <i class="material-icons-round">desktop_windows</i>
-          <span>System</span>
-        </button>
+        <div class="hiddenCont">
+          <a href="">
+            <span>Social 1</span>
+          </a>
+          <a href="">
+            <span>Social 2</span>
+          </a>
+          <a href="">
+            <span>Social 3</span>
+          </a>
+        </div>
       </div>
-    </div>
+    </ul>
   </nav>
 </div>

@@ -30,7 +30,6 @@ svg {
 }
 
 .seeMore span {
-  text-shadow: 0 0 8px black;
   text-decoration: underline;
   font-weight: bold;
 }

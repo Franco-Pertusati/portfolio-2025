@@ -14,11 +14,10 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: url('/image.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--bg1);
   mask-image: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, #000000 30%);
   z-index: inherit;
+  background-image: var(--gridBg);
 }
 
 .titleContainer {
@@ -44,18 +43,24 @@ h2 {
   z-index: 20;
 }
 
+
 a {
+  background-color: var(--bg);
   transition: all ease .2s;
-  border: solid 1px var(--bg);
 }
 
 a:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 32px -12px var(--font2);
+  background-color: var(--bg);
 }
 
 .accent {
-  border: solid 1px var(--font);
+  background-color: var(--font);
+}
+
+.accent:hover {
+  background-color: var(--font);
 }
 
 @media (min-width: 600px) {
