@@ -85,6 +85,7 @@ nav ul {
     opacity: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     border-style: none;
     box-shadow: none;

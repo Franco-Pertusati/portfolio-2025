@@ -1,56 +1,8 @@
 <div class="projectsContainer">
   <h2>Main projects</h2>
-  <div class="projectsNavbar">
-    @for (p of projects; track $index) {
-    <button (click)="selectProject($index)" [ngClass]="selectedProject.title === p.title? 'selected' : ''">
-      <span>{{ p.title }}</span>
-      <i class="material-icons-round">{{ p.icon }}</i>
-    </button>
+  <div class="projectList">
+    @for (project of projects; track $index) {
+      <app-card [project]="project" />
     }
-  </div>
-  <div class="projectContent">
-
-    <div class="carrousel">
-
-      <div class="imgContainer">
-        <img [src]="imgToDisplay" alt="">
-      </div>
-
-      <div class="imgPointsList">
-        @for (b of selectedProject.imgs; track $index) {
-          <button (click)="selectImg($index)" [ngClass]="imgToDisplay === b ? 'selected' : ''"></button>
-        }
-      </div>
-
-    </div>
-
-    @if (showDescription) {
-    <div class="description">
-      <div class="winBg">
-        <h3>
-          {{ selectedProject.title }}
-        </h3>
-        <p>
-          {{ selectedProject.description }}
-        </p>
-      </div>
-      <div class="blur" (click)="showDescription = false"></div>
-    </div>
-    }
-
-    <div class="projectBar">
-      <button [ngClass]="showDescription === false ? 'selected' : ''" (click)="showDescription = false">
-        <i class="material-icons-round">web_stories</i>
-        <span>Pictures</span>
-      </button>
-      <button [ngClass]="showDescription === true ? 'selected' : ''" (click)="showDescription = true">
-        <i class="material-icons-round">segment</i>
-        <span>Description</span>
-      </button>
-      <button href="">
-        <i class="material-icons-round">open_in_new</i>
-        <span>Preview</span>
-      </button>
-    </div>
   </div>
 </div>

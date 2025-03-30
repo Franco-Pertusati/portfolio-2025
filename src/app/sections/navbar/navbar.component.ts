@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
+import { ThemeBtnComponent } from '../../ui/theme-btn/theme-btn.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ThemeBtnComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
