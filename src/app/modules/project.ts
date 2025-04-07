@@ -3,5 +3,8 @@ export interface Project {
   subtitle: string;
   description: string;
   images: string[];
+  thumbnail: string;
   link: string;
+  bTecs: string[];
+  fTecs: string[];
 }

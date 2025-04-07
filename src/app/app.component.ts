@@ -9,7 +9,7 @@ import { AboutMeComponent } from "./sections/about-me/about-me.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PresentationCardComponent, NavbarComponent, StackComponent, ProjectsComponent, AboutMeComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

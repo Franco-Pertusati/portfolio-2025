@@ -32,12 +32,11 @@ img {
 @media (min-width: 900px) {
   .card {
     padding: 42px;
-    background-color: var(--murray);
     background: linear-gradient(45deg, var(--bg1) 0%, var(--bg2) 100%);
-    border-radius: 32px;
+    border-radius: 12px;
   }
 
   img {
-    border-radius: 20px;
+    border-style: none;
   }
 }

@@ -1,7 +1,7 @@
 .light {
-  --bg: #f8f9fa;
-  --bg1: #e9ecef;
-  --bg2: #d7dadd;
+  --bg: #F8F9FA;
+  --bg1: #E4E7EA;
+  --bg2: #D0D4D7;
 
   --font: #1a1a1a;
   --font2: #272727;
@@ -54,11 +54,16 @@ body {
   justify-content: center;
 }
 
+body * {
+  font-size: 2rem;
+}
+
 .gap8 {
   gap: 8px;
 }
 
 .pageContainer {
+  margin: 0 auto;
   max-width: 960px;
   height: 100%;
   display: flex;
@@ -132,6 +137,7 @@ h3,
 h5,
 h6 {
   font-size: 3rem;
+  font-weight: normal;
 }
 
 h4 {
@@ -163,6 +169,7 @@ img {
   border-style: none;
   max-width: 100%;
   display: block;
+  border-radius: 4px;
 }
 
 span,
@@ -202,8 +209,8 @@ label {
   align-items: center;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--bg2);
   position: relative;
+  background-color: transparent;
 }
 
 button span,
@@ -211,10 +218,10 @@ a span {
   font-size: 1.5rem;
 }
 
-/* button:hover,
+button:hover,
 a:hover {
-  background-color: var(--hover);
-} */
+  background-color: var(--bg2);
+}
 
 .wFit {
   width: fit-content;
@@ -268,9 +275,13 @@ input:focus {
   background-color: var(--font);
 }
 
+.accent:hover {
+  background-color: var(--font2);
+}
+
 .accent span,
 .accent i {
-  color: var(--bg2);
+  color: var(--bg);
 }
 
 .softTxt {
@@ -315,5 +326,11 @@ hr {
   .onlySvg svg {
     width: 30px;
     height: 30px;
+  }
+}
+
+@media (min-width: 900px) {
+  .pageCont {
+    padding: 0;
   }
 }

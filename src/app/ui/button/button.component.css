@@ -5,3 +5,15 @@ button {
 button:hover {
   background-color: var(--bg2);
 }
+
+.accent {
+  background-color: var(--font);
+}
+
+.accent * {
+  color: var(--bg);
+}
+
+.accent:hover {
+  background: linear-gradient(45deg, rgba(255,77,116,1) 0%, rgba(255,83,40,1) 100%);
+}

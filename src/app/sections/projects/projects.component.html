@@ -2,7 +2,7 @@
   <h2>Main projects</h2>
   <div class="projectList">
     @for (project of projects; track $index) {
-      <app-card [project]="project" />
+      <app-card [project]="project" (click)="setIndex($index); navigate();"/>
     }
   </div>
 </div>

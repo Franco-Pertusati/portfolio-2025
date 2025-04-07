@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardComponent } from './card/card.component';
 import { Project } from '../../modules/project';
+import { ProjectsService } from '../../services/projects.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -11,33 +13,19 @@ import { Project } from '../../modules/project';
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
+  constructor(private pService: ProjectsService, private router: Router) {
+    this.projects = this.pService.getProjects();
+  }
+
+  projects: Project[] = []
   showDescription = false;
 
-  projects: Project[] = [
-    {
-      title: 'Gastronomy',
-      subtitle: 'No more delays',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['as', 's', 'img3'],
-      link: 'www.youtube.com',
-    },
-    {
-      title: 'Link Shortener',
-      subtitle: 'Easy link management',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['img'],
-      link: 'www.youtube.com',
-    },
-    {
-      title: 'CSS Grid Generator',
-      subtitle: 'Helpful xd',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['pro3', 'img2'],
-      link: 'www.youtube.com',
-    },
-  ];
+  navigate() {
+    this.router.navigate(['/projects']);
+  }
+
+  setIndex(index:number) {
+    this.pService.setIndex(index)
+  }
 }
 

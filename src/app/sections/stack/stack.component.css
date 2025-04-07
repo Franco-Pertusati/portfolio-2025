@@ -31,7 +31,7 @@ svg {
 
 .seeMore span {
   text-decoration: underline;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .tecsList {
@@ -54,7 +54,7 @@ svg {
   align-items: center;
   gap: var(--gap);
 
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .tecsList li {
@@ -92,7 +92,7 @@ svg {
 
   .stackContainer {
     margin: 0 auto;
-    width: calc(100% - 24px);
+    width: 100%;
     flex-direction: row;
     gap: 32px;
   }
