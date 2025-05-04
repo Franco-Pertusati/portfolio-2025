@@ -1,7 +1,11 @@
-<app-navbar />
 <div class="pageContainer">
-  <router-outlet />
-  <div class="blurContainer">
-    <app-blurry-bottom />
+  <app-navbar />
+  <div class="flexCol">
+    <div>
+      <app-presentation-card id="s1" />
+      <app-stack />
+    </div>
+    <app-projects id="s2" />
+    <app-about-me id="s3" />
   </div>
 </div>

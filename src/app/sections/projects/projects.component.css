@@ -1,16 +1,14 @@
-.projectsContainer {
-  margin: 42px 0;
-}
-
 h2 {
   margin: 18px 0;
+  margin-bottom: 42px;
+  font-size: 4rem;
 }
 
 .projectList {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 56px;
+  gap: 86px;
 }
 
 @media(max-width: 900px) {

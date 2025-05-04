@@ -10,47 +10,41 @@ export class ProjectsService {
 
   projects: Project[] = [
     {
-      title: 'Gastronomy System',
-      subtitle: 'No more delays in the orders',
+      title: 'Table management system',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['as', 's', 'img3'],
-      thumbnail: 'projectsImgs/sg/thumbnail.png',
-      link: 'www.youtube.com',
-      fTecs: ['Angular 18', 'Vanilla CSS'],
-      bTecs: ['Symfony', 'API Platform', 'MySql'],
+      thumbnail: 'https://cdn.cosmos.so/fd137f33-a420-426b-8efb-f72ce4077137?format=jpeg',
+      tecs: ['Angular 18', 'Vanilla CSS', 'Symfony', 'API Platform', 'MySql'],
+      reppo: '',
+      preview: ''
     },
     {
       title: 'Link Shortener',
-      subtitle: 'Easy link management',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['img'],
-      thumbnail: 'projectsImgs/linktun/thumbnail.png',
-      link: 'www.youtube.com',
-      bTecs: ['ExpressJs', 'NodeJS', 'Firebase'],
-      fTecs: ['Angular 18', 'TailWind'],
+      thumbnail: 'https://cdn.cosmos.so/8e6e8af1-0727-4670-81a6-60099cd4d8f4?format=jpeg',
+      tecs: ['ExpressJs', 'NodeJS', 'Firebase', 'Angular 18', 'TailWind'],
+      reppo: '',
+      preview: ''
     },
     {
       title: 'CSS Grid Generator',
-      subtitle: 'Helpful xd',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      images: ['pro3', 'img2'],
-      thumbnail: 'projectsImgs/grid/thumbnail.png',
-      link: 'www.youtube.com',
-      bTecs: ['Todavia', 'no', 'se'],
-      fTecs: ['Angular 18'],
+      thumbnail: 'https://cdn.cosmos.so/3517bda5-8e4c-4523-aeaa-07b9dcac25ef?format=jpeg',
+      tecs: ['Angular 18', 'Vanilla CSS', 'Symfony', 'API Platform', 'MySql'],
+      reppo: '',
+      preview: ''
     },
   ];
 
-  actualIndex:number = 0;
+  actualIndex: number = 0;
 
   getProjects() {
     return this.projects
   }
 
-  setIndex(index:number) {
+  setIndex(index: number) {
     this.actualIndex = index;
   }
 

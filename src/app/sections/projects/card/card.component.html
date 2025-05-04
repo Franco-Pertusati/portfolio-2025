@@ -1,9 +1,18 @@
 <div class="cardContainer">
-  <div class="head">
+  <div class="projectData">
     <h3>{{ project?.title }}</h3>
-    <span>{{ project?.subtitle }}</span>
+    <p>{{ project?.description }}</p>
+    <div class="tecnologies">
+      @for (t of project?.tecs; track $index) {
+      <span>#{{ t }}</span>
+      }
+    </div>
+    <div class="flex">
+      <app-button [style]="'rounded'" [accent]="true" [label]="'Preview'" [icon]="'open_in_new'" />
+      <app-button [style]="'border rounded'" [label]="'Repository'" [icon]="'open_in_new'" />
+    </div>
   </div>
-  <div class="card">
+  <div class="imgContainer shadow">
     <img [src]="project?.thumbnail" alt="">
   </div>
 </div>

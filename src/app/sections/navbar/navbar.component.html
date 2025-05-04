@@ -4,20 +4,22 @@
       <i class="material-icons-round">menu</i>
     </button>
     <ul [ngClass]="isNavbarClosed? '' : 'show'">
-      <a href="">
+      <a href="#s1">
         <i class="material-icons-round">home</i>
       </a>
       <app-dropdown [icon]="'send'" [label]="'Contact'">
-        <app-button [style]="'wFull'" [icon]="'mail'" [label]="'Some shit'" />
-        <app-button [style]="'wFull'" [icon]="'mail'" [label]="'Some shit'" />
-        <app-button [style]="'wFull'" [icon]="'mail'" [label]="'Some shit'" />
+        <app-button [style]="'wFull'" [icon]="'copy'" [label]="'Copy my e-mail'" />
+        <app-button [style]="'wFull'" [icon]="'open_in_new'" [label]="'LinkedIn'" />
+        <app-button [style]="'wFull'" [icon]="'open_in_new'" [label]="'Git-hub'" />
       </app-dropdown>
       <hr>
-      <a href="/projects">
+      <a href="#s2">
+        <i class="material-icons-round">grid_view</i>
         <span>Projects</span>
       </a>
       <hr>
-      <a href="">
+      <a href="#s3">
+        <i class="material-icons-round">person</i>
         <span>About Me</span>
       </a>
       <hr>

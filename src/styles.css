@@ -10,7 +10,7 @@
   --main: #ff5328;
   --murray: #ff4d74;
 
-  --transparent: #f8f9fa81;
+  --transparent: hsla(210, 17%, 98%, 0.3);
 
   --blue: #2bc0ff;
   --red: #ff302c;
@@ -31,7 +31,7 @@
   --main: #ff5328;
   --murray: #ff4d74;
 
-  --transparent: #26262647;
+  --transparent: hsla(0, 0%, 15%, 0.3);
 
   --blue: #2bc0ff;
   --red: #ff302c;
@@ -69,7 +69,7 @@ body * {
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 44px;
 }
 
 .winCol {
@@ -90,7 +90,7 @@ body * {
   background-color: var(--bg);
   border-radius: 8px;
   border: solid 1px var(--bg2);
-  box-shadow: 0 4px 12px hsla(0, 0%, 11%, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 12px 24px 0px
 }
 
 .wsm {
@@ -106,7 +106,7 @@ body * {
 }
 
 .shadow {
-  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.2) 0px 12px 32px 0px
 }
 
 .center {
@@ -118,6 +118,10 @@ body * {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.flexCol {
+  flex-direction: column;
 }
 
 .jcBtw {
@@ -221,7 +225,7 @@ a span {
 
 button:hover,
 a:hover {
-  background-color: var(--bg2);
+  background-color: var(--bg1);
 }
 
 .wFit {
@@ -307,6 +311,14 @@ hr {
 
 .onlySvg {
   padding: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.border {
+  border: solid 1px var(--bg2);
 }
 
 @media (min-width: 600px) {

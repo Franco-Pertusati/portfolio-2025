@@ -1,28 +1,10 @@
-<div>
+<div class="flex flexCol mainContainer">
   <h2>About Me</h2>
-  <div class="aboutContainer">
-    <div class="description">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quibusdam, numquam nobis sed provident iste omnis
-        voluptatum odio autem suscipit magnam inventore sit dicta architecto ducimus totam, repudiandae aperiam dolorem.
-      </p>
-      <div>
-        <app-contact-buttons />
-      </div>
-    </div>
-    <div class="studyList">
-      <div class="Line"></div>
-      @for (card of studyCards; track $index) {
-      <div class="studysCard">
-        <i class="material-icons-round">calendar_today</i>
-        <div>
-          <div>
-            <span>{{ card.title}}</span>
-          </div>
-          <p>{{ card.description }}</p>
-        </div>
-      </div>
-      }
-    </div>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id atque, sed, corrupti nemo distinctio quos beatae fuga
+    nam quidem pariatur aperiam totam doloribus numquam odit consequuntur inventore tenetur ut voluptatibus.
+  </p>
+  <div class="center">
+    <app-contact-buttons />
   </div>
 </div>

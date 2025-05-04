@@ -1,6 +1,5 @@
-.blurContainer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 90;
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  gap: 248px;
 }
