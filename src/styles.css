@@ -4,7 +4,7 @@
   --bg2: #D0D4D7;
 
   --font: #1a1a1a;
-  --font2: #272727;
+  --font2: #303030;
   --font3: #585858;
 
   --main: #ff5328;
@@ -158,7 +158,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--font3);
+  color: var(--font2);
   background-color: var(--bg);
 }
 
@@ -222,7 +222,7 @@ label {
 button *,
 a * {
   font-size: 1.5rem;
-  color: var(--font3);
+  color: var(--font2);
 }
 
 button:hover *,
