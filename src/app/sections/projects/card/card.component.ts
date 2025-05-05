@@ -11,4 +11,5 @@ import { ButtonComponent } from "../../../ui/button/button.component";
 })
 export class CardComponent {
   @Input() project?:Project;
+  @Input() index?:number
 }

@@ -15,5 +15,10 @@ button:hover {
 }
 
 .accent:hover {
-  background: linear-gradient(45deg, rgba(255,77,116,1) 0%, rgba(255,83,40,1) 100%);
+  background: linear-gradient(45deg, rgba(255, 77, 116, 1) 0%, rgba(255, 83, 40, 1) 100%);
+}
+
+.spanCenter span {
+  width: 100%;
+  text-align: center;
 }

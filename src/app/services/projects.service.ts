@@ -10,10 +10,10 @@ export class ProjectsService {
 
   projects: Project[] = [
     {
-      title: 'Table management system',
+      title: 'Gastronomic system',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      thumbnail: 'https://cdn.cosmos.so/fd137f33-a420-426b-8efb-f72ce4077137?format=jpeg',
+      imgs: ['projectsImgs/sg/1.png', 'projectsImgs/sg/2.png'],
       tecs: ['Angular 18', 'Vanilla CSS', 'Symfony', 'API Platform', 'MySql'],
       reppo: '',
       preview: ''
@@ -22,17 +22,8 @@ export class ProjectsService {
       title: 'Link Shortener',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      thumbnail: 'https://cdn.cosmos.so/8e6e8af1-0727-4670-81a6-60099cd4d8f4?format=jpeg',
+      imgs: ['projectsImgs/linktun/2.png', 'projectsImgs/linktun/1.png'],
       tecs: ['ExpressJs', 'NodeJS', 'Firebase', 'Angular 18', 'TailWind'],
-      reppo: '',
-      preview: ''
-    },
-    {
-      title: 'CSS Grid Generator',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar, justo a porttitor euismod, massa nibh finibus tortor, vel sollicitudin lorem odio fermentum elit. Phasellus tristique imperdiet placerat. Etiam volutpat eros id molestie iaculis. ',
-      thumbnail: 'https://cdn.cosmos.so/3517bda5-8e4c-4523-aeaa-07b9dcac25ef?format=jpeg',
-      tecs: ['Angular 18', 'Vanilla CSS', 'Symfony', 'API Platform', 'MySql'],
       reppo: '',
       preview: ''
     },

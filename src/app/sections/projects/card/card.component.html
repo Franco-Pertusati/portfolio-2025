@@ -4,15 +4,19 @@
     <p>{{ project?.description }}</p>
     <div class="tecnologies">
       @for (t of project?.tecs; track $index) {
-      <span>#{{ t }}</span>
+      <span>{{ t }}</span>
       }
     </div>
-    <div class="flex">
+    <div class="flex center">
       <app-button [style]="'rounded'" [accent]="true" [label]="'Preview'" [icon]="'open_in_new'" />
       <app-button [style]="'border rounded'" [label]="'Repository'" [icon]="'open_in_new'" />
     </div>
   </div>
-  <div class="imgContainer shadow">
-    <img [src]="project?.thumbnail" alt="">
+  <div [class]="'imgContainer shadow ' + 'gradient' + index">
+    <div class="flex flexCol">
+      @for (img of project?.imgs; track $index) {
+      <img [src]="img" alt="">
+      }
+    </div>
   </div>
 </div>

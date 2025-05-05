@@ -1,3 +1,75 @@
 .mainContainer {
-  margin-bottom: 128px;
+  width: 100%;
+  padding: 24px;
+  background-size: 50%;
+  position: absolute;
+  left: 0;
+  background-image: var(--gridBg);
+  display: flex;
+  justify-content: center;
+}
+
+.mainContainerContent {
+  max-width: 960px;
+  width: 100%;
+}
+
+.p12 {
+  padding: 12px;
+}
+
+.linkedInProfile span, .linkedInProfile h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.linkedInProfile h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #181818;
+}
+
+.linkedInProfile span {
+  font-size: 1.6rem;
+  color: #363636;
+}
+
+.linkedInProfile img:first-of-type {
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 48px;
+}
+
+.linkedInProfile .profileImg {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  border-radius: 50%;
+  border: solid 2px white;
+}
+
+.linkedInProfile button {
+  margin-top: 12px;
+  padding: 6px 12px;
+  background-color: #0a66c2;
+  color: white;
+  border-radius: 99px;
+}
+
+.linkedInProfile button * {
+  color: white;
+  font-weight: bold;
+}
+
+.linkedInBg {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(140, 140, 140, 0.2) 0px 0px 0px 1px;
+}
+
+.linkedInProfile .rounded {
+  border: solid 1px #0a66c2;
+  background-color: white;
+}
+
+.linkedInProfile .rounded * {
+  color: #0a66c2;
 }
