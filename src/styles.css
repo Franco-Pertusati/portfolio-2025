@@ -10,6 +10,7 @@
   --main: #ff5328;
   --murray: #ff4d74;
 
+  --border: rgba(255, 255, 255, 0.3)
   --transparent: hsla(210, 17%, 98%, 0.3);
 
   --blue: #2bc0ff;
@@ -31,6 +32,7 @@
   --main: #ff5328;
   --murray: #ff4d74;
 
+  --border: rgba(255, 255, 255, 1)
   --transparent: hsla(0, 0%, 15%, 0.3);
 
   --blue: #2bc0ff;
@@ -89,8 +91,13 @@ body * {
   padding: 8px;
   background-color: var(--bg);
   border-radius: 8px;
-  border: solid 1px var(--bg2);
-  box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 12px 24px 0px
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 10px 24px 0px;
+}
+
+.dark .winBg {
+  outline: solid 1px var(--bg);
+  box-shadow: none;
+  background-color: var(--bg2);
 }
 
 .wsm {
@@ -357,6 +364,18 @@ html {
 
 .cta:hover * {
   color: white;
+}
+
+p {
+  color: var(--font2);
+}
+
+.badge {
+  font-size: 1.4rem;
+  background-color: var(--font);
+  color: var(--bg);
+  border-radius: 99px;
+  padding: 4px 8px;
 }
 
 @media (min-width: 600px) {
