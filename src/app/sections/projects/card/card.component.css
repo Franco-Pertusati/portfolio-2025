@@ -7,8 +7,7 @@ h3 {
 .cardContainer {
   display: grid;
   gap: 24px;
-  grid-template-columns: auto 400px;
-  height: 306px;
+  grid-template-rows: min-content min-content min-content;
 }
 
 .projectData {
@@ -36,47 +35,6 @@ p {
   font-size: 1.8rem;
 }
 
-.imgContainer {
-  padding: 12px;
-  height: 100%;
-  width: 100%;
-  background-color: var(--bg1);
-  border-radius: 24px;
-  overflow-y: hidden;
-  position: relative;
-}
-
-img {
-  height: 100%;
-  width: 376px;
-  border-radius: 12px;
-}
-
 .flex {
   transition: all ease .3s;
-}
-
-.gradient0 {
-  background: var(--murray);
-}
-
-.gradient0:hover .flex {
-  transform: translateY(-94px)
-}
-
-.gradient1 {
-  background-color: var(--main);
-}
-
-.gradient1 .flex {
-  flex-direction: row;
-}
-
-.gradient1 img {
-  width: 50%;
-  align-self: start;
-}
-
-.gradient2 {
-  background: rgb(22, 103, 235);
 }
