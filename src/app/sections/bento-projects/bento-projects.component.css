@@ -42,38 +42,37 @@
 }
 
 .gs .mainCont {
-  display: grid;
-  grid-template-columns: .6fr 1fr;
-  gap: 24px;
-}
-
-.mainCont .winBg2 {
-  border-radius: 8px;
-  width: fit-content;
-  padding: 8px 16px;
-  text-wrap-mode: nowrap;
-  background: linear-gradient(to right, var(--main), var(--murray));
-  background-clip: text;
-  color: transparent;
-  font-size: 1.4rem;
-  box-shadow: hsla(12, 100%, 50%, 0.1) 0px 0px 0px 1px, hsla(12, 100%, 50%, 0.1) 0px 2px 4px 0px, hsla(12, 100%, 50%, 0.1) 0px 6px 12px 0px;
-}
-
-.mainCont .winBg2:nth-child(even) {
-  margin-left: auto;
-}
-
-.mainCont .winBg2:nth-child(odd) {
-  margin-right: auto;
+  display: flex;
 }
 
 .salon {
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 82px);
-  grid-template-rows: repeat(3, 82px);
+  grid-template-columns: repeat(4, 82px);
+  grid-template-rows: repeat(5, 82px);
   gap: 8px;
 }
 
+.salonCell {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.05) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.05) 0px 4px 12px 0px inset;
+}
+
+.salonTable {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 4px 12px 0px;
+  display: grid;
+  place-items: center;
+}
+
+.salonTable i {
+  font-size: 3rem;
+}
 
 .table {
   height: 100%;
@@ -84,6 +83,19 @@
   border-radius: 12px;
   font-size: 1.4rem;
   font-weight: bold;
+}
+
+.ticketContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket {
+  width: 142px;
+  height: 20px;
+  background-color: red;
 }
 
 /* LINK SHORTENER */
