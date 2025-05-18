@@ -1,0 +1,5 @@
+.ctaContainer {
+  border-radius: 8px;
+  padding-bottom: 2px;
+  background: linear-gradient(90deg, hsla(346, 84%, 61%, 1) 0%, hsla(42, 100%, 70%, 1) 25%, hsla(164, 95%, 43%, 1) 75%, hsla(195, 83%, 38%, 1) 100%);
+}

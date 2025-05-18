@@ -1,0 +1,13 @@
+<button [routerLink]="routerLink" [ngClass]="[style, !showLabel || !label? 'justIcon' : '']">
+  @if (showIcon && icon) {
+  <i class="material-icons-round">{{ icon }}</i>
+  }
+  @if (showLabel && label) {
+  <span>{{ label | titlecase }}</span>
+  }
+  @if (notifications) {
+  <div class="notNum">
+    {{ notifications }}
+  </div>
+  }
+</button>

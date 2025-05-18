@@ -1,0 +1,71 @@
+<div class="navContainer">
+  @if (mobileNav) {
+  <button (click)="openMobileNav()" style="position: fixed; top: 0; z-index: 100;"
+    class="ghost justIcon rounded cardShadow m12">
+    <i class="material-icons-round">menu</i>
+  </button>
+  }
+
+  <div [ngClass]="[isNavbarClosed? '' : 'showNav', mobileNav? 'mobileNav bgGlass' : 'desktopNav']"
+    (click)="closeMobileNav()">
+    <nav class="p8 flex gap8 flexCol"
+      [ngClass]="[mobileNav? 'bg cardShadow' : '', isScrolled && !mobileNav? 'scrolled bgGlass' : '']"
+      (click)="$event.stopPropagation()">
+      <div class="flex gap12 justbt" [ngClass]="[mobileNav ? 'wfull' : 'wfit']">
+        <label for="">
+          <a href="#section1" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section1' ? 'active-link' : '']">
+            @if (mobileNav) {
+            <i class="material-icons-round">arrow_forward</i>
+            }
+            <span>Contact</span>
+          </a>
+        </label>
+        @if (mobileNav) {
+        <div class="flex gap12">
+          <app-theme-btn />
+          <app-button [label]="''" [icon]="'close'" [style]="'ghost'" (click)="closeMobileNav()" />
+        </div>
+        }
+      </div>
+      <hr>
+      <a href="#section2" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section2' ? 'active-link' : '']">
+        @if (mobileNav) {
+        <i class="material-icons-round">arrow_forward</i>
+        }
+        <span>Projects</span>
+      </a>
+      <hr>
+      <a href="#section3" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section3' ? 'active-link' : '']">
+        @if (mobileNav) {
+        <i class="material-icons-round">arrow_forward</i>
+        }
+        <span>About Me</span>
+      </a>
+      @if (mobileNav) {
+      <hr>
+      <a [ngClass]="mobileNav? 'wfull' : 'wfit'">
+        @if (mobileNav) {
+        <i class="material-icons-round">open_in_new</i>
+        }
+        <span>LinkedIn</span>
+      </a>
+      }
+      <hr>
+      @if (mobileNav) {
+      <a [ngClass]="mobileNav? 'wfull' : 'wfit'">
+        @if (mobileNav) {
+        <i class="material-icons-round">open_in_new</i>
+        }
+        <span>Git-hub</span>
+      </a>
+      <hr>
+      }
+      <button class="accent justcenter">
+        <span>Download CV</span>
+      </button>
+      @if (!mobileNav) {
+      <app-theme-btn />
+      }
+    </nav>
+  </div>
+</div>

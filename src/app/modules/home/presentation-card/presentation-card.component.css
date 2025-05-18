@@ -1,0 +1,38 @@
+.presentationCardContainer {
+  width: 100vw;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 6px;
+  position: relative;
+  z-index: -1;
+}
+
+.magicpattern {
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: var(--gridBg);
+  background-repeat: repeat;
+  background-size: 870px;
+  background-position: 50% top;
+  overflow: visible;
+  z-index: -1;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0) 100%);
+}
+
+.myName {
+  font-size: 2rem;
+  color: var(--font2);
+}
+
+h1,
+strong {
+  font-size: 3.4rem;
+  font-weight: normal;
+}

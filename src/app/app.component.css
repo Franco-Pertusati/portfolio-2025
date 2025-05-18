@@ -1,5 +1,5 @@
-.flexCol {
-  display: flex;
-  flex-direction: column;
-  gap: 248px;
+.toastCompContianer {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }

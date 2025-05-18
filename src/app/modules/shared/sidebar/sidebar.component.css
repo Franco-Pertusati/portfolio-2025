@@ -1,0 +1,13 @@
+.isOpen {
+  width: 264px;
+}
+
+.isClosed {
+  width: 58px;
+}
+
+.sidebar {
+  transition: width ease .3s;
+  overflow-x: hidden;
+}
+

@@ -1,0 +1,193 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.scrollList {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+.justcenter {
+  justify-content: center;
+}
+
+.justbt {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+}
+
+.gap8 {
+  gap: 8px;
+}
+
+.gap12 {
+  gap: 12px;
+}
+
+.gap24 {
+  gap: 24px;
+}
+
+.p8 {
+  padding: 8px;
+}
+
+.p12 {
+  padding: 12px;
+}
+
+.p24 {
+  padding: 24px;
+}
+
+.m8 {
+  margin: 8px;
+}
+
+.m12 {
+  margin: 12px;
+}
+
+.m24 {
+  margin: 24px;
+}
+
+.bg {
+  background-color: var(--bg1);
+  border-radius: 12px;
+  box-shadow: rgba(3, 7, 18, 0.12) 0px 0px 0px 1px;
+}
+
+.dark .bg {
+  box-shadow: rgba(58, 58, 58, 0.3) 0px 0px 0px 1px;
+}
+
+.light .bgGlass {
+  background: var(--transparent);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: rgba(3, 7, 18, 0.12) 0px 0px 0px 1px;
+}
+
+.light .cardShadow {
+  box-shadow: rgba(3, 7, 18, 0.12) 0px 0px 0px 1px, rgba(3, 7, 18, 0.08) 0px 1px 2px -1px, rgba(3, 7, 18, 0.1) 0px 2px 8px 0px;
+}
+
+.dark .cardShadow {
+  box-shadow: rgba(58, 58, 58, 0.3) 0px 0px 0px 1px, rgba(77, 77, 77, 0.2) 0px 1px 2px -1px inset, rgba(58, 58, 58, 0.2) 0px 2px 8px 0px inset;
+}
+
+.dark .bgGlass {
+  background: var(--transparent);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: rgba(128, 128, 128, 0.1) 0px 0px 0px 1px;
+}
+
+.bgReverse {
+  background-color: var(--bg1);
+  border-radius: 12px;
+  box-shadow: rgba(3, 7, 18, 0.08) 0px 0px 0px 1px, rgba(3, 7, 18, 0.08) 0px 1px 2px -1px inset, rgba(3, 7, 18, 0.1) 0px 2px 8px 0px inset;
+}
+
+.bg1 {
+  background-color: var(--bg1);
+}
+
+.bg2 {
+  background-color: var(--bg2);
+}
+
+.bg3 {
+  background-color: var(--bg3);
+}
+
+.hfit {
+  height: fit-content;
+}
+
+.wfit {
+  width: fit-content;
+}
+
+.hfull {
+  height: 100%;
+}
+
+.wfull {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fsmall {
+  font-size: 1.2rem;
+}
+
+.fbody {
+  font-size: 1.8rem;
+}
+
+.ftitle {
+  font-size: 2.4rem;
+}
+
+.fstrong {
+  font-weight: bold;
+}
+
+.fnormal {
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.lgw {
+  max-width: 1024px;
+}
+
+.rainbowTxt {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background-clip: text;
+  color: transparent;
+}

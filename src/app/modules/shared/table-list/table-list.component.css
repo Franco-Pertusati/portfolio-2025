@@ -1,0 +1,32 @@
+.itemRow, .titleRow {
+  display: grid;
+  grid-template-columns: minmax(200px, max-content) minmax(200px, auto) 100px 32px 32px;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 24px;
+}
+
+.itemRow:hover {
+  background-color: var(--bg3);
+}
+
+.titleRow span {
+  font-weight: bold;
+}
+
+.bg {
+  padding: 24px 0;
+}
+
+.cont {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selected {
+  background-color: var(--bg3);
+}
