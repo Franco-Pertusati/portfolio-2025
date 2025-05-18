@@ -45,6 +45,7 @@ hr {
 .desktopNav {
   width: 100vw;
   position: fixed;
+  top: 12px;
 }
 
 .desktopNav nav {
