@@ -1,0 +1,25 @@
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+a {
+  justify-content: center;
+}
+
+.projectTitleContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: -12px;
+}
+
+.projectTitle {
+  line-height: 1;
+  border-radius: 99px;
+}
+
+img, a {
+  border-radius: 6px;
+}
