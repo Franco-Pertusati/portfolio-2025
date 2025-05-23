@@ -37,3 +37,19 @@ strong {
   font-size: 3.4rem;
   font-weight: normal;
 }
+
+@media(min-width: 600px) {
+  .presentationCardContainer {
+    height: 320px;
+  }
+
+  .myName {
+    font-size: 3rem;
+  }
+
+  h1,
+  strong {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+}

@@ -1,4 +1,5 @@
-<div class="wfull center p12 flex flexCol gap24">
+<div class="wfull center flex projectsList">
+  <h2 class="wfull textCenter">Main Projects</h2>
   @for (p of projects; track $index) {
     <app-project-card [title]="p.title" [img]="p.img" [preview]="p.preview" [repo]="p.repo" />
   }

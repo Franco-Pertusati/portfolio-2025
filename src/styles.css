@@ -131,7 +131,8 @@ select:focus {
   outline: 2px var(--primary) solid;
 }
 
-button, a {
+button,
+a {
   height: 34px;
   background-color: transparent;
   border-style: none;
@@ -151,4 +152,21 @@ h3 {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.widthLayout {
+  max-width: 360px;
+}
+
+@media(min-width: 600px) {
+  .widthLayout {
+    max-width: 564px;
+  }
+}
+
+@media(min-width: 720px) {
+  .widthLayout {
+    max-width: 564px;
+  }
 }

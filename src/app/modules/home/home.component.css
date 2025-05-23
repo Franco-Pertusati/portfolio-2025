@@ -1,3 +1,19 @@
-#section2 {
-  margin: 56px 0;
+.botomBlur {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  mask-image: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.84) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0) 100%);
+  color: transparent;
+  backdrop-filter: blur(8px);
+}
+
+section {
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+#section1 {
+  border-style: none;
+  max-width: 100vw;
 }

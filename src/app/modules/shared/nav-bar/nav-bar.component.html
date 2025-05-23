@@ -27,14 +27,12 @@
         </div>
         }
       </div>
-      <hr>
       <a href="#section2" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section2' ? 'active-link' : '']">
         @if (mobileNav) {
         <i class="material-icons-round">arrow_forward</i>
         }
         <span>Projects</span>
       </a>
-      <hr>
       <a href="#section3" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section3' ? 'active-link' : '']">
         @if (mobileNav) {
         <i class="material-icons-round">arrow_forward</i>
@@ -42,7 +40,6 @@
         <span>About Me</span>
       </a>
       @if (mobileNav) {
-      <hr>
       <a [ngClass]="mobileNav? 'wfull' : 'wfit'">
         @if (mobileNav) {
         <i class="material-icons-round">open_in_new</i>
@@ -50,7 +47,6 @@
         <span>LinkedIn</span>
       </a>
       }
-      <hr>
       @if (mobileNav) {
       <a [ngClass]="mobileNav? 'wfull' : 'wfit'">
         @if (mobileNav) {
@@ -58,7 +54,6 @@
         }
         <span>Git-hub</span>
       </a>
-      <hr>
       }
       <button class="accent justcenter">
         <span>Download CV</span>

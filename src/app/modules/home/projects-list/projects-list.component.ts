@@ -25,7 +25,7 @@ export class ProjectsListComponent {
     },
     {
       title: 'Geometrical patterns',
-      img: 'https://i.pinimg.com/736x/fb/bc/66/fbbc66e29b37adf1d1360748bba9dd5f.jpg',
+      img: 'https://i.pinimg.com/736x/a1/9a/c5/a19ac5f9e05d69a3e251019c8614d124.jpg',
       repo: '',
       preview: ''
     }

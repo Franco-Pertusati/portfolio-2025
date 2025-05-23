@@ -1,0 +1,10 @@
+.projectsList {
+  padding: 56px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 56px;
+  line-height: 1;
+}

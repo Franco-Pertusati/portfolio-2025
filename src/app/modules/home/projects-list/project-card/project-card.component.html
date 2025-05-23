@@ -1,16 +1,16 @@
-<div class="bg p8 flex flexCol gap8 relative card cardShadow">
-  <div class="projectTitleContainer">
-    <span class="projectTitle bg p8 cardShadow">{{ title | titlecase }}</span>
-  </div>
-  <img [src]="img" alt="">
-  <div class="flex gap8">
-    <a [href]="preview" class="wfull ghost">
-      <span>Preview</span>
-      <i class="material-icons-round">visibility</i>
-    </a>
-    <a [href]="repo" class="wfull ghost">
-      <span>Repository</span>
-      <i class="material-icons-round">open_in_new</i>
-    </a>
+<div class="flex flexCol gap8 p12">
+  <span class="projectTitle wfull">{{ title | titlecase }}</span>
+  <div class="bg p8 flex flexCol gap8 relative card cardShadow">
+    <img [src]="img" alt="">
+    <div class="flex gap8">
+      <a [href]="preview" class="wfull ghost">
+        <span>Preview</span>
+        <i class="material-icons-round">visibility</i>
+      </a>
+      <a [href]="repo" class="wfull ghost">
+        <span>Repository</span>
+        <i class="material-icons-round">open_in_new</i>
+      </a>
+    </div>
   </div>
 </div>
