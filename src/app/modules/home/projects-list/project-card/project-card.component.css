@@ -17,12 +17,19 @@ a {
 
 img,
 a {
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 
 @media(min-width: 600px) {
   .card {
     width: 480px;
+  }
+}
+
+
+@media(min-width: 900px) {
+  .card {
+    max-width: 398px;
   }
 }

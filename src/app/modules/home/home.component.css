@@ -9,8 +9,8 @@
 }
 
 section {
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--bg2);
+  border-right: 1px solid var(--bg2);
 }
 
 #section1 {

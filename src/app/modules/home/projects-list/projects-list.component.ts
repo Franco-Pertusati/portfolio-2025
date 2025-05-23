@@ -23,6 +23,12 @@ export class ProjectsListComponent {
       repo: '',
       preview: ''
     },
+        {
+      title: 'UI library',
+      img: 'https://i.pinimg.com/736x/6b/b8/2f/6bb82fa608674b8d2c91d56fdfacfd84.jpg',
+      repo: '',
+      preview: ''
+    },
     {
       title: 'Geometrical patterns',
       img: 'https://i.pinimg.com/736x/a1/9a/c5/a19ac5f9e05d69a3e251019c8614d124.jpg',
