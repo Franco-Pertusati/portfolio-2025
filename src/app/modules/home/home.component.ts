@@ -4,11 +4,12 @@ import { ThemeBtnComponent } from "../shared/theme-btn/theme-btn.component";
 import { PresentationCardComponent } from "./presentation-card/presentation-card.component";
 import { StackComponent } from "./stack/stack.component";
 import { ProjectsListComponent } from "./projects-list/projects-list.component";
+import { AboutMeComponent } from "./about-me/about-me.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavBarComponent, PresentationCardComponent, StackComponent, ProjectsListComponent],
+  imports: [NavBarComponent, PresentationCardComponent, StackComponent, ProjectsListComponent, AboutMeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

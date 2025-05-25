@@ -2,6 +2,7 @@
   padding: 56px 0;
   flex-wrap: wrap;
   justify-content: center;
+  border-bottom: 1px solid var(--bg2);
 }
 
 h2 {
