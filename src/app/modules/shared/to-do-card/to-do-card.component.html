@@ -1,9 +1,0 @@
-<div class="bg flex aligncenter gap12 p12 wfull relative" [ngClass]="complete? 'completed' : ''">
-  <app-button [icon]="complete ? 'check_box' : 'check_box_outline_blank'" [label]="''" (click)="toggleComplete()" />
-  <span class="wfull">{{ title }}</span>
-  @if (deadLine) {
-  <span style="text-wrap: nowrap;">{{ formatDeadline() }}</span>
-  }
-  <app-button [icon]="'edit'" [label]="''" />
-  <app-button [icon]="'delete'" [label]="''"  (click)="onDelete()"/>
-</div>

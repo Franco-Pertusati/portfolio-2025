@@ -35,7 +35,7 @@ export class NavBarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sectionIds = ['section1', 'section2', 'section3'];
+    const sectionIds = ['presentation', 'projects', 'about-me'];
     let currentSection = '';
 
     for (let id of sectionIds) {
@@ -50,6 +50,7 @@ export class NavBarComponent {
     }
 
     this.activeSection = currentSection;
+    console.log(this.activeSection, currentSection)
     this.isScrolled = window.scrollY > 10;
   }
 

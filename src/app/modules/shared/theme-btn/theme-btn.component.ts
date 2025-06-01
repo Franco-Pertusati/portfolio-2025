@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
 import { ThemeService } from '../../../core/services/theme.service';
 
@@ -10,6 +10,7 @@ import { ThemeService } from '../../../core/services/theme.service';
   styleUrl: './theme-btn.component.css'
 })
 export class ThemeBtnComponent {
+  @Input() style:string = '';
   currentTheme: 'light' | 'dark';
 
   constructor(private themeService: ThemeService) {

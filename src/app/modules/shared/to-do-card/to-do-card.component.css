@@ -1,8 +1,0 @@
-.completed {
-  background-color: var(--bg3);
-  box-shadow: none;
-}
-
-.completed span {
-  text-decoration: line-through;
-}

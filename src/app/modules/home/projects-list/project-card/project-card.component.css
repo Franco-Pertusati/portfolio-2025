@@ -1,7 +1,3 @@
-.projectTitle {
-  color: var(--font2);
-}
-
 img {
   width: 100%;
   border-radius: 12px;
@@ -12,7 +8,7 @@ a {
 }
 
 .projectTitle {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 img,

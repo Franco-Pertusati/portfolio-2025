@@ -1,9 +1,12 @@
 <div class="navContainer">
-  @if (mobileNav) {
-  <button (click)="openMobileNav()" style="position: fixed; top: 0; z-index: 100;"
-    class="ghost justIcon rounded cardShadow m12">
-    <i class="material-icons-round">menu</i>
-  </button>
+  @if (mobileNav && isNavbarClosed) {
+  <div class="flex gap12 bg cardShadow p8 m12"  style="position: fixed; bottom: 12px; right: 12px; z-index: 100;">
+    <app-theme-btn />
+    <button (click)="openMobileNav()"
+      class="justIcon rounded">
+      <i class="material-icons-round">menu</i>
+    </button>
+  </div>
   }
 
   <div [ngClass]="[isNavbarClosed? '' : 'showNav', mobileNav? 'mobileNav bgGlass' : 'desktopNav']"
@@ -13,7 +16,8 @@
       (click)="$event.stopPropagation()">
       <div class="flex gap12 justbt" [ngClass]="[mobileNav ? 'wfull' : 'wfit']">
         <label for="">
-          <a href="#section1" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section1' ? 'active-link' : '']">
+          <a href="#presentation"
+            [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'presentation' ? 'active-link' : '']">
             @if (mobileNav) {
             <i class="material-icons-round">arrow_forward</i>
             }
@@ -22,18 +26,19 @@
         </label>
         @if (mobileNav) {
         <div class="flex gap12">
-          <app-theme-btn />
           <app-button [label]="''" [icon]="'close'" [style]="'ghost'" (click)="closeMobileNav()" />
         </div>
         }
       </div>
-      <a href="#section2" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section2' ? 'active-link' : '']">
+      <a href="#projects"
+        [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'projects' ? 'active-link' : '']">
         @if (mobileNav) {
         <i class="material-icons-round">arrow_forward</i>
         }
         <span>Projects</span>
       </a>
-      <a href="#section3" [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'section3' ? 'active-link' : '']">
+      <a href="#about-me"
+        [ngClass]="[mobileNav ? 'wfull' : 'wfit', !mobileNav && activeSection === 'about-me' ? 'active-link' : '']">
         @if (mobileNav) {
         <i class="material-icons-round">arrow_forward</i>
         }
