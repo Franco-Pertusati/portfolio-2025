@@ -50,6 +50,14 @@ strong {
   justify-content: space-between;
 }
 
+a svg {
+  fill: var(--font2);
+}
+
+a:hover svg {
+  fill: var(--font);
+}
+
 @media(min-width: 600px) {
   .presentationCardContainer {
     height: 320px;

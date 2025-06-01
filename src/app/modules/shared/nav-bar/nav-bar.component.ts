@@ -50,7 +50,6 @@ export class NavBarComponent {
     }
 
     this.activeSection = currentSection;
-    console.log(this.activeSection, currentSection)
     this.isScrolled = window.scrollY > 10;
   }
 

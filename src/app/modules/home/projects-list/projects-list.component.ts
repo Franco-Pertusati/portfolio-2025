@@ -13,27 +13,27 @@ export class ProjectsListComponent {
   projects = [
     {
       title: 'gastronomic system',
-      img: 'https://i.pinimg.com/736x/35/35/1e/35351e214db7e48eeb50b6f6f378fdc4.jpg',
-      repo: '',
+      img: 'ProjectImgs/1.png',
+      repo: 'https://github.com/Franco-Pertusati/growler-front',
       preview: 'https://growler-front.vercel.app/app/dashboard'
     },
     {
       title: 'link shortener',
-      img: 'https://i.pinimg.com/736x/d2/3f/91/d23f917741ed20732ba5d1f9f732f4ab.jpg',
-      repo: '',
+      img: 'ProjectImgs/2.png',
+      repo: 'https://github.com/Franco-Pertusati/Linktun',
       preview: 'https://franco-pertusati.github.io/Linktun/#/'
     },
-        {
-      title: 'UI library',
-      img: 'https://i.pinimg.com/736x/6b/b8/2f/6bb82fa608674b8d2c91d56fdfacfd84.jpg',
-      repo: '',
-      preview: ''
-    },
-    {
-      title: 'Geometrical patterns',
-      img: 'https://i.pinimg.com/736x/a1/9a/c5/a19ac5f9e05d69a3e251019c8614d124.jpg',
-      repo: '',
-      preview: ''
-    }
+    // {
+    //   title: 'UI library',
+    //   img: 'https://i.pinimg.com/736x/6b/b8/2f/6bb82fa608674b8d2c91d56fdfacfd84.jpg',
+    //   repo: '',
+    //   preview: ''
+    // },
+    // {
+    //   title: 'Geometrical patterns',
+    //   img: 'https://i.pinimg.com/736x/a1/9a/c5/a19ac5f9e05d69a3e251019c8614d124.jpg',
+    //   repo: '',
+    //   preview: ''
+    // }
   ]
 }

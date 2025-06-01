@@ -7,4 +7,5 @@ import { CoppyTextComponent } from "../../shared/coppy-text/coppy-text.component
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })
+
 export class AboutMeComponent {}
