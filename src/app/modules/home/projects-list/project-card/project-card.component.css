@@ -17,6 +17,18 @@ a {
   border-radius: 8px;
 }
 
+.tecPill {
+  background-color: var(--font);
+  color: var(--bg1);
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.card {
+  gap: 16px;
+}
 
 @media(min-width: 600px) {
   .card {

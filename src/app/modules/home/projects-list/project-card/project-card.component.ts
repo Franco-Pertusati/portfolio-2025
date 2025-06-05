@@ -12,4 +12,5 @@ export class ProjectCardComponent {
   @Input() img: string = '';
   @Input() repo: string = '';
   @Input() preview: string = '';
+  @Input() tecs: string[] = [];
 }

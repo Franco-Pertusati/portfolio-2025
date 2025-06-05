@@ -1,8 +1,13 @@
 <div class="flex flexCol gap8 p12">
   <span class="projectTitle wfull">{{ title | titlecase }}</span>
-  <div class="bg p8 flex flexCol gap8 relative card">
-    <div class="imgContainer">
-      <img [src]="img" alt="">
+  <div class="bg p8 flex flexCol relative card">
+    <img [src]="img" alt="">
+    <div class="flex gap8">
+      @for (tec of tecs; track $index) {
+      <span class="tecPill">
+        {{ tec }}
+      </span>
+      }
     </div>
     <div class="flex gap8">
       <a [href]="preview" target="_blank" class="wfull primary">

@@ -15,13 +15,15 @@ export class ProjectsListComponent {
       title: 'gastronomic system',
       img: 'ProjectImgs/1.png',
       repo: 'https://github.com/Franco-Pertusati/growler-front',
-      preview: 'https://growler-front.vercel.app/app/dashboard'
+      preview: 'https://growler-front.vercel.app/app/dashboard',
+      tecs: ['Angular 18', 'Node.Js', 'Express.Js', 'MySQL']
     },
     {
       title: 'link shortener',
       img: 'ProjectImgs/2.png',
       repo: 'https://github.com/Franco-Pertusati/Linktun',
-      preview: 'https://franco-pertusati.github.io/Linktun/#/'
+      preview: 'https://franco-pertusati.github.io/Linktun/#/',
+      tecs: ['Angular 17', 'Firebase', 'Node.Js', 'Express.Js']
     },
     // {
     //   title: 'UI library',
