@@ -28,19 +28,17 @@
       <span>23 Years</span>
     </div>
   </div>
-  <div class="flex flexCol wfit center gap24 p24" style="padding: 56px 24px;">
-    <div class="flex gap12 justbt">
-      <a class="wfit ghost" href="https://www.linkedin.com/in/franco-pertusati-571308316" target="_blank">
-        <i class="material-icons-round">open_in_new</i>
-        <span>LinkedIn</span>
-      </a>
-      <a class="wfit ghost" href="https://github.com/Franco-Pertusati" target="_blank">
-        <i class="material-icons-round">open_in_new</i>
-        <span>GitHub</span>
-      </a>
+  <div class="flex flexCol wfit center gap24 p24 links" style="padding: 56px 24px;">
+    <div class="flex gap8 aligncenter" style="border-radius: 32px;">
+      <a href="https://www.linkedin.com/in/franco-pertusati-571308316">LinkedIn profile</a>
+      <app-coppy-text [contentToCopy]="'https://www.linkedin.com/in/franco-pertusati-571308316'" />
     </div>
     <div class="flex gap8 aligncenter" style="border-radius: 32px;">
-      <span class="p8">pertu********&#64;gmail.com</span>
+      <a href="https://github.com/Franco-Pertusati">Git-Hub profile</a>
+      <app-coppy-text [contentToCopy]="'https://github.com/Franco-Pertusati'" />
+    </div>
+    <div class="flex gap8 aligncenter" style="border-radius: 32px;">
+      <span>pertu********&#64;gmail.com</span>
       <app-coppy-text [contentToCopy]="'pertusatifranco100@gmail.com'" />
     </div>
   </div>
