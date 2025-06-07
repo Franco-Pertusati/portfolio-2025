@@ -55,10 +55,6 @@
   color: var(--primary);
 }
 
-span {
-  text-wrap: nowrap;
-}
-
 .rounded {
   border-radius: 8px;
 }
