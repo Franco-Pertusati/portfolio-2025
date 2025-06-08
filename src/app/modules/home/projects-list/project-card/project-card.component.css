@@ -15,7 +15,7 @@ img {
 }
 
 .imgContainer:hover .btnContainer {
-  display: flex;
+  opacity: 100%;
 }
 
 .description {
@@ -32,9 +32,12 @@ img {
   backdrop-filter: blur(4px);
   justify-content: center;
   align-items: center;
-  display: none;
   border-radius: 16px;
+  opacity: 0;
+  transition: all ease .3s;
 }
+
+
 
 .rainbowTxt {
   font-size: 1.4rem;
