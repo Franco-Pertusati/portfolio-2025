@@ -18,6 +18,10 @@ img {
   opacity: 100%;
 }
 
+.imgContainer:hover .btnContainer a {
+  transform: scale(1);
+}
+
 .description {
   color: var(--font2);
 }
@@ -37,7 +41,10 @@ img {
   transition: all ease .3s;
 }
 
-
+.btnContainer a {
+  transition: all ease .3s;
+  transform: scale(.5);
+}
 
 .rainbowTxt {
   font-size: 1.4rem;
