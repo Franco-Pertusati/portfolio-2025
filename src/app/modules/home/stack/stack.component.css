@@ -43,8 +43,9 @@
 
 @media(min-width: 900px) {
   .stackContainer {
+    width: 100%;
     height: fit-content;
-    grid-template-columns: repeat(4, 168px);
+    grid-template-columns: repeat(4, 1fr);
     mask-image: none;
   }
 
