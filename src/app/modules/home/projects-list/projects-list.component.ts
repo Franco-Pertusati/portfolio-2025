@@ -16,14 +16,16 @@ export class ProjectsListComponent {
       img: 'ProjectImgs/1.png',
       repo: 'https://github.com/Franco-Pertusati/growler-front',
       preview: 'https://growler-front.vercel.app/app/dashboard',
-      tecs: ['Angular', 'Node.Js', 'Express.Js', 'MySQL']
+      tecs: ['Angular', 'Node.Js', 'Express.Js', 'MySQL'],
+      description: ''
     },
     {
       title: 'link shortener',
       img: 'ProjectImgs/2.png',
       repo: 'https://github.com/Franco-Pertusati/Linktun',
       preview: 'https://franco-pertusati.github.io/Linktun/#/',
-      tecs: ['Angular', 'Firebase', 'Node.Js', 'Express.Js']
+      tecs: ['Angular', 'Firebase', 'Node.Js', 'Express.Js'],
+      description: ''
     },
     // {
     //   title: 'UI library',

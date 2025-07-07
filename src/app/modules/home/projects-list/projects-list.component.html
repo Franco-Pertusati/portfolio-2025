@@ -2,7 +2,7 @@
   <h2 class="wfull textCenter">Main Projects</h2>
   <div class="wfull flex flexCol p24" style="gap: 98px;">
     @for (p of projects; track $index) {
-    <app-project-card [title]="p.title" [img]="p.img" [preview]="p.preview" [repo]="p.repo" [tecs]="p.tecs" />
+    <app-project-card [project]="p" />
     }
   </div>
 </div>

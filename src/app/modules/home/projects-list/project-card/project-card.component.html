@@ -1,22 +1,36 @@
 <div class="card flex flexCol gap12 wfull">
-  <h3>{{ title | titlecase }}</h3>
-
-  <div class="flex flexWrap gap12" >
-    @for (item of tecs; track $index) {
-      <span class="rainbowTxt">#{{item}}</span>
+  <h3>{{ project.title | titlecase }}</h3>
+  @if (project.description.trim()) {
+  <span class="description">
+    {{ project.description }}
+  </span>
+  }
+  <div class="flex flexWrap gap12">
+    @for (item of project.tecs; track $index) {
+    <span class="rainbowTxt">#{{ item }}</span>
     }
   </div>
   <div class="imgContainer bg bg2">
-    <img [src]="img" alt="">
+    <img [src]="project.img" alt="" />
     <div class="flex gap12 btnContainer">
-      <a [href]="repo" target="_blank" class="ghost">
+      <a [href]="project.repo" target="_blank" class="ghost">
         <span>Code</span>
         <i class="material-icons-round">code</i>
       </a>
-      <a [href]="preview" target="_blank" class="ghost">
+      <a [href]="project.preview" target="_blank" class="ghost">
         <span>Preview</span>
         <i class="material-icons-round">preview</i>
       </a>
     </div>
+  </div>
+  <div class="mobileAnchors flex wfull gap12">
+    <a [href]="project.repo" target="_blank" class="ghost">
+      <span>Code</span>
+      <i class="material-icons-round">code</i>
+    </a>
+    <a [href]="project.preview" target="_blank" class="ghost">
+      <span>Preview</span>
+      <i class="material-icons-round">preview</i>
+    </a>
   </div>
 </div>

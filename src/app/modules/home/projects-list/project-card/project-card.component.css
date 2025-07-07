@@ -59,3 +59,9 @@ img {
     border: solid 1px var(--bg3);
   }
 }
+
+@media(min-width: 720px) {
+  .mobileAnchors {
+    display: none;
+  }
+}
