@@ -1,41 +1,44 @@
 .toastContainer {
-  position: relative;
-}
-
-.toast {
-  min-width: 420px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.noShadow {
-  box-shadow: none;
-}
-
-.toastContainer:hover .toast {
-  position: relative;
-}
-
-.toastContainer:hover {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+.toastContainer .toast:last-of-type {
+  display: flex;
+}
+
 .toastContainer:hover .toast {
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1),0 2px 4px #0000000d,0 12px 24px #0000000d;
+  display: flex;
 }
 
-i {
-  border: solid 1px var(--border);
+.toastContainer:hover .toastBallsList {
+  display: none;
+}
+
+.toastBallsList div {
   padding: 6px;
-  border-radius: 50px;
-  background: linear-gradient(145deg, var(--bg1), var(--bg2));
-  font-size: 2rem;
-  transition: transform 0.2s ease;
+  border-radius: 12px;
 }
 
-.toast:hover i {
-  transform: scale(1.1);
+.toast {
+  display: none;
+  width: 100%;
+  min-width: 412px;
+  border: solid 1px var(--bg2);
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }

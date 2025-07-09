@@ -1,19 +1,22 @@
 import { Injectable, signal, WritableSignal } from '@angular/core';
 
 export interface ToastNotification {
-  title: string | undefined;
+  title?: string;
   message: string;
-  icon: string | undefined;
+  icon?: string;
 }
+
+type InternalToast = ToastNotification & { fading?: boolean };
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToastService {
-  toastList: WritableSignal<ToastNotification[]> = signal([])
+  toastList: WritableSignal<InternalToast[]> = signal([])
 
   default(message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: undefined,
       message: message,
       icon: undefined
@@ -22,7 +25,7 @@ export class ToastService {
   }
 
   description(title: string, message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: title,
       message: message,
       icon: undefined
@@ -31,7 +34,7 @@ export class ToastService {
   }
 
   succes(message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: undefined,
       message: message,
       icon: 'check_circle'
@@ -40,7 +43,7 @@ export class ToastService {
   }
 
   info(message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: undefined,
       message: message,
       icon: 'info'
@@ -49,7 +52,7 @@ export class ToastService {
   }
 
   warning(message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: undefined,
       message: message,
       icon: 'warning'
@@ -58,7 +61,7 @@ export class ToastService {
   }
 
   error(message: string) {
-    const newToast: ToastNotification = {
+    const newToast: InternalToast = {
       title: undefined,
       message: message,
       icon: 'error'
@@ -66,18 +69,22 @@ export class ToastService {
     this.addToast(newToast)
   }
 
-  addToast(newToast: ToastNotification) {
-    this.toastList().push(newToast)
-    console.log(this.toastList())
+  addToast(newToast: InternalToast & { fading?: boolean }) {
+    const updatedList = [...this.toastList(), newToast];
+    this.toastList.set(updatedList);
+
     setTimeout(() => {
-      this.removeToast(newToast)
-    }, 10500);
+      newToast.fading = true;
+      this.toastList.set([...this.toastList()]);
+    }, 2600);
+
+    setTimeout(() => {
+      this.removeToast(newToast);
+    }, 3000);
   }
 
-  removeToast(toast: ToastNotification) {
-    const index = this.toastList().indexOf(toast);
-    if (index > -1) {
-      this.toastList().splice(index, 1);
-    }
+  removeToast(toast: InternalToast) {
+    const updatedList = this.toastList().filter(t => t !== toast);
+    this.toastList.set(updatedList);
   }
 }

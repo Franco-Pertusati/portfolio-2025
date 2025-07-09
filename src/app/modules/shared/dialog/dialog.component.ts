@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NodemailerService } from '../../../core/services/nodemailer.service';
+import { ToastService } from '../../../core/services/toast.service';
 
 @Component({
   selector: 'app-dialog',
@@ -17,7 +18,7 @@ export class DialogComponent {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private mailer: NodemailerService) {
+  constructor(private fb: FormBuilder, private mailer: NodemailerService, private toast: ToastService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       company: [''],
@@ -37,12 +38,10 @@ export class DialogComponent {
   sendForm(data: any) {
     this.mailer.sendMessage(data).subscribe({
       next: (response) => {
-        console.log('Éxito:', response);
-        alert('Mensaje enviado correctamente');
+        this.toast.error("Message sent successfully.")
       },
       error: (error) => {
-        console.error('Error:', error);
-        alert('Hubo un error al enviar el mensaje');
+        this.toast.succes("Error sending message, try again.")
       },
     });
   }

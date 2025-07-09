@@ -12,5 +12,5 @@ import { NgClass } from '@angular/common';
 export class ToastComponent {
   toastList = computed(() => this.toastService.toastList());
 
-  constructor(private toastService: ToastService) {}
+  constructor(private toastService: ToastService) { }
 }
