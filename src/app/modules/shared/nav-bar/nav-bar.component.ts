@@ -25,7 +25,7 @@ export class NavBarComponent {
   }
 
   private setNavType() {
-    if (window.innerWidth > 600) {
+    if (window.innerWidth > 778) {
       this.isNavbarClosed = true
       this.mobileNav = false;
     } else {

@@ -58,6 +58,12 @@ a:hover svg {
   fill: var(--font);
 }
 
+.rainbowTxt {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background-clip: text;
+  color: transparent;
+}
+
 @media(min-width: 600px) {
   .presentationCardContainer {
     height: 320px;

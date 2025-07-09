@@ -102,7 +102,7 @@ h3 {
   width: 100%;
 }
 
-input {
+input, textarea {
   padding: 4px;
   border-style: none;
   border-radius: 4px;
@@ -110,7 +110,7 @@ input {
   background-color: var(--bg1);
 }
 
-input:focus {
+input:focus, textarea:focus {
   border: 1px solid var(--primary);
   outline: none;
 }
