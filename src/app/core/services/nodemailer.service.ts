@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NodemailerService {
   private http = inject(HttpClient);
-private apiUrl = 'https://contact-form-node-production.up.railway.app/api/contact/send';
+  private apiUrl = 'https://contact-form-node-production.up.railway.app/api/contact/send';
 
   sendMessage(data: {
     nombre: string;

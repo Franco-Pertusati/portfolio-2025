@@ -195,3 +195,7 @@
   background-clip: text;
   color: transparent;
 }
+
+.mainColorTxt {
+  color: var(--primary);
+}

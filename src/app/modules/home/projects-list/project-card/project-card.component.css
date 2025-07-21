@@ -3,7 +3,7 @@
 }
 
 .imgContainer {
-  display: flex;
+  display: none;
   position: relative;
   border-style: none;
   box-shadow: none;
@@ -53,6 +53,7 @@ img {
 @media (min-width: 600px) {
   .imgContainer {
     padding: 24px;
+    display: flex;
   }
 
   img {
