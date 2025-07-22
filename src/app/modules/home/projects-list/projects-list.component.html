@@ -10,11 +10,11 @@
     <h2 class="wfull textCenter apiCard">APIs Projects</h2>
     <ul class="p24 gap24 flex flexCol">
       @for (api of apiProjects; track $index) {
-      <div class="wfit center p12 bg card flex flexCol gap12">
+      <div class="cardShadow bg wfit center p12 flex flexCol gap12">
         <div class="flex wfull aligncenter justbt">
           <h3>{{ api.title }}</h3>
           @if (api.repo) {
-          <a href="" class="wfit">
+          <a [href]="api.repo" target="_blank" class="wfit">
             <span class="mainColorTxt">Code</span>
             <i class="material-icons-round mainColorTxt">code</i>
           </a>

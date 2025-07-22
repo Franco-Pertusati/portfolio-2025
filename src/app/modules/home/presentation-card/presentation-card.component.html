@@ -5,13 +5,7 @@
     <h1><strong class="rainbowTxt">Front-End</strong> Developer</h1>
   </div>
   <div class="flex center gap12">
-    @if (isFormOpen) {
-      <app-dialog (dialogState)="onClose()"/>
-    }
-    <button class="accent" (click)="openForm()">
-      <span>Contact Me</span>
-      <i class="material-icons-round"> send </i>
-    </button>
+    <app-contact-btn />
     <a
       class="justIcon"
       href="https://www.linkedin.com/in/franco-pertusati-571308316"

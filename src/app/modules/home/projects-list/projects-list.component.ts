@@ -33,7 +33,7 @@ export class ProjectsListComponent {
   apiProjects: Project[] = [
     {
       title: 'Link Shortener API',
-      repo: 'https://github.com/Franco-Pertusati/Linktun',
+      repo: 'https://github.com/Franco-Pertusati/linkShortenerAPI',
       preview: 'https://github.com/Franco-Pertusati/linkShortenerAPI',
       tecs: [ 'Firebase', 'Node.Js', 'Express.Js'],
       description: `This API allows you to shorten URLs. It includes routes to generate a short link, redirect to the original URL, and retrieve the links created by a user using their ID. Account management and user authentication are handled through Firebase.`

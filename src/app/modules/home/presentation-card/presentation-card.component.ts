@@ -1,21 +1,10 @@
 import { Component } from '@angular/core';
-import { DialogComponent } from "../../shared/dialog/dialog.component";
+import { ContactBtnComponent } from "../../shared/contact-btn/contact-btn.component";
 
 @Component({
   selector: 'app-presentation-card',
-  imports: [DialogComponent],
+  imports: [ContactBtnComponent],
   templateUrl: './presentation-card.component.html',
   styleUrl: './presentation-card.component.css'
 })
-export class PresentationCardComponent {
-  isFormOpen: boolean = false
-
-
-  onClose() {
-    this.isFormOpen = false;
-  }
-
-  openForm() {
-    this.isFormOpen = true;
-  }
-}
+export class PresentationCardComponent {}
