@@ -19,6 +19,7 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: var(--transparent);
+  border-radius: 12px;
   backdrop-filter: blur(4px);
   opacity: 0;
   transition: all ease .3s;
