@@ -1,4 +1,4 @@
-<div class="cardShadow p12 bg">
+<div class="cardShadow bg">
   <div class="imgContainer relative">
     <img class="wfull" [src]="project.img" alt="" />
     <div class="desktopBtns flex gap12">
@@ -12,7 +12,7 @@
       </a>
     </div>
   </div>
-  <div class="flex flexCol gap12">
+  <div class="dataContainer p12 flex flexCol gap12">
     <div class="flex gap8 flexWrap">
       @for (tec of project.tecs; track $index) {
       <span class="rainbowTxt">#{{ tec }}</span>

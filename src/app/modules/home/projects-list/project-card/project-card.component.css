@@ -64,4 +64,8 @@ h3 {
   img {
     border-radius: 12px;
   }
+
+  .dataContainer {
+    padding: 0;
+  }
 }
