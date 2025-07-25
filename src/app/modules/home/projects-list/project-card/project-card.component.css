@@ -1,5 +1,5 @@
 img {
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 .flexWrap .rainbowTxt {
@@ -42,9 +42,7 @@ h3 {
 
 @media (min-width: 600px) {}
 
-@media (min-width: 720px) {
-
-}
+@media (min-width: 720px) {}
 
 @media (min-width: 900px) {
   .mobileBtns {
@@ -57,5 +55,13 @@ h3 {
 
   .flexWrap .rainbowTxt {
     font-size: 1.4rem;
+  }
+
+  .cardShadow {
+    padding: 12px;
+  }
+
+  img {
+    border-radius: 12px;
   }
 }
