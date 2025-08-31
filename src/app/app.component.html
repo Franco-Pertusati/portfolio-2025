@@ -1,6 +1,10 @@
-<div class="hfull">
-  <app-home />
-  <div class="toastCompContianer">
-    <app-toast />
-  </div>
+<div>
+  <app-navbar />
+  <router-outlet />
 </div>
+@if (dialog.isDialogOpen()) {
+<app-dialog>
+  <ng-container *ngComponentOutlet="dialog.componentToShow()"></ng-container>
+</app-dialog>
+}
+<app-toast-list />

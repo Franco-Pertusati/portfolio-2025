@@ -1,90 +1,39 @@
-import { Injectable, signal, WritableSignal } from '@angular/core';
-
-export interface ToastNotification {
-  title?: string;
-  message: string;
-  icon?: string;
-}
-
-type InternalToast = ToastNotification & { fading?: boolean };
-
+import { Injectable, signal } from '@angular/core';
+import { Toast } from '../interfaces/toast';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ToastService {
-  toastList: WritableSignal<InternalToast[]> = signal([])
+  toastList = signal<Toast[]>([])
 
-  default(message: string) {
-    const newToast: InternalToast = {
-      title: undefined,
-      message: message,
-      icon: undefined
-    }
-    this.addToast(newToast)
-  }
-
-  description(title: string, message: string) {
-    const newToast: InternalToast = {
-      title: title,
-      message: message,
-      icon: undefined
-    }
-    this.addToast(newToast)
-  }
-
-  succes(message: string) {
-    const newToast: InternalToast = {
-      title: undefined,
-      message: message,
-      icon: 'check_circle'
-    }
-    this.addToast(newToast)
-  }
-
-  info(message: string) {
-    const newToast: InternalToast = {
-      title: undefined,
-      message: message,
-      icon: 'info'
-    }
-    this.addToast(newToast)
-  }
-
-  warning(message: string) {
-    const newToast: InternalToast = {
-      title: undefined,
-      message: message,
-      icon: 'warning'
-    }
-    this.addToast(newToast)
-  }
-
-  error(message: string) {
-    const newToast: InternalToast = {
-      title: undefined,
-      message: message,
-      icon: 'error'
-    }
-    this.addToast(newToast)
-  }
-
-  addToast(newToast: InternalToast & { fading?: boolean }) {
-    const updatedList = [...this.toastList(), newToast];
-    this.toastList.set(updatedList);
-
+  createToast(toast: Toast) {
+    this.toastList.set([...this.toastList(), toast]);
     setTimeout(() => {
-      newToast.fading = true;
-      this.toastList.set([...this.toastList()]);
-    }, 2600);
-
-    setTimeout(() => {
-      this.removeToast(newToast);
+      this.closeToast()
     }, 3000);
   }
 
-  removeToast(toast: InternalToast) {
-    const updatedList = this.toastList().filter(t => t !== toast);
-    this.toastList.set(updatedList);
+  closeToast() {
+    const currentToasts = this.toastList();
+    this.toastList.set(currentToasts.slice(1));
+  }
+
+  error(title: string, message?: string) {
+    const newToast: Toast = {
+      title: title,
+      message: message || undefined,
+      icon: 'error'
+    }
+    this.createToast(newToast)
+  }
+
+  success(title: string, message?: string) {
+    const newToast: Toast = {
+      title: title,
+      message: message || undefined,
+      icon: 'check_circle'
+    }
+    this.createToast(newToast)
   }
 }

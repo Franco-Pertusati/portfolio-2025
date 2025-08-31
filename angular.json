@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-2025-b": {
+    "dashboard-angular-19": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portfolio-2025-b",
+            "outputPath": "dist/dashboard-angular-19",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -84,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfolio-2025-b:build:production"
+              "buildTarget": "dashboard-angular-19:build:production"
             },
             "development": {
-              "buildTarget": "portfolio-2025-b:build:development"
+              "buildTarget": "dashboard-angular-19:build:development"
             }
           },
           "defaultConfiguration": "development"

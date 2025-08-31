@@ -1,40 +1,42 @@
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+// src/app/services/theme.service.ts
+import { Injectable, signal, effect } from '@angular/core';
+
+type Theme = 'light' | 'dark';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
-  private renderer: Renderer2;
-  private currentTheme: 'light' | 'dark' = 'light';
+  private readonly storageKey = 'app-theme';
 
-  constructor(rendererFactory: RendererFactory2) {
-    this.renderer = rendererFactory.createRenderer(null, null);
+  // Signal con el tema actual
+  private themeSignal = signal<Theme>(this.getInitialTheme());
 
-    // Verificar preferencias del usuario
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+  theme = this.themeSignal.asReadonly();
+
+  constructor() {
+    effect(() => {
+      const theme = this.themeSignal();
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem(this.storageKey, theme);
+    });
+  }
+
+  toggleTheme() {
+    this.themeSignal.update(t => (t === 'light' ? 'dark' : 'light'));
+  }
+
+  setTheme(theme: Theme) {
+    this.themeSignal.set(theme);
+  }
+
+  private getInitialTheme(): Theme {
+    // 1. Leer de localStorage
+    const stored = localStorage.getItem(this.storageKey) as Theme | null;
+    if (stored === 'light' || stored === 'dark') return stored;
+
+    // 2. Leer preferencia del dispositivo
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    this.currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-    this.applyTheme(this.currentTheme);
-  }
-
-  toggleTheme(): void {
-    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-    this.applyTheme(this.currentTheme);
-    localStorage.setItem('theme', this.currentTheme);
-  }
-
-  getCurrentTheme(): 'light' | 'dark' {
-    return this.currentTheme;
-  }
-
-  private applyTheme(theme: 'light' | 'dark'): void {
-    if (theme === 'dark') {
-      this.renderer.addClass(document.body, 'dark');
-      this.renderer.removeClass(document.body, 'light');
-    } else {
-      this.renderer.addClass(document.body, 'light');
-      this.renderer.removeClass(document.body, 'dark');
-    }
+    return prefersDark ? 'dark' : 'light';
   }
 }
