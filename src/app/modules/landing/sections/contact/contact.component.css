@@ -1,0 +1,34 @@
+.contactContainer {
+  height: 450px;
+  border-bottom: 1px solid var(--border);
+}
+
+.layoutSize {
+  padding-top: 24px;
+}
+
+.headerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--gridBg);
+  background-repeat: repeat;
+  background-size: 850px;
+  background-position: 50% top;
+  mask-image: linear-gradient(0, #000 60%, #0000);
+  z-index: -1;
+}
+
+.titleText {
+  font-size: 8rem;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+.mutedText {
+  max-width: 800px;
+}

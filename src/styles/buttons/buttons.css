@@ -21,6 +21,7 @@
 
 .btn-border {
   border: solid 1px var(--border);
+  background-color: var(--bg);
 }
 
 .btn-form {
@@ -41,11 +42,12 @@
 
 .btn-cta {
   background-color: var(--text);
-  padding: var(--spacing-6) 24px;
+  background-color: var(--primary);
+  box-shadow: 0 0 3px #ffffff4d inset,0 2px 4px var(--secondary) inset;
 }
 
-.btn-cta span {
-  color: var(--bg);
+.btn-cta * {
+  color: white;
   font-weight: bold;
 }
 
