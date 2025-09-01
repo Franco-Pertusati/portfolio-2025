@@ -5,4 +5,5 @@ export interface Project {
   img: string,
   src: string,
   tags: string
+  id: number
 }

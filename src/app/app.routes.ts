@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
+import { ProjectBlogsComponent } from './modules/project-blogs/project-blogs.component';
 
 export const routes: Routes = [
   {
-    path: 'projects',
-    loadChildren: () => import('./modules/project-blogs/dashboard.routes')
-      .then(m => m.DASHBOARD_ROUTES)
+    path: 'projects/:id',
+    component: ProjectBlogsComponent
   },
   {
     path: '',

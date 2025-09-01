@@ -1,6 +1,6 @@
 @let p = project();
 
-<a class="project flex flexCol gap3 p0" [href]="`projects/${p.src}`">
+<button class="project flex flexCol gap3 p0" (click)="navigateTo()">
   <div class="imgContainer">
     <img [src]="p.img" alt="" class="wFull" />
   </div>
@@ -13,4 +13,4 @@
     </span>
   </div>
   <br />
-</a>
+</button>

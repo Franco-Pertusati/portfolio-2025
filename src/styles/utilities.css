@@ -150,6 +150,10 @@
   align-items: center;
 }
 
+.flexWrap {
+  flex-wrap: wrap;
+}
+
 .gap1 {
   gap: var(--spacing-1);
 }
