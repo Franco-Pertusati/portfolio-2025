@@ -1,0 +1,8 @@
+.topBar {
+  border-bottom: solid 1px var(--border);
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 412px), 1fr));
+}

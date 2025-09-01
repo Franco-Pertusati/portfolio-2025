@@ -21,7 +21,7 @@
 
 .btn-border {
   border: solid 1px var(--border);
-  background-color: var(--bg);
+  background-color: var(--bg-dark);
 }
 
 .btn-form {

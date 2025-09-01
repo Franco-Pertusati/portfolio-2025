@@ -1,0 +1,16 @@
+@let p = project();
+
+<a class="project flex flexCol gap3 p0" [href]="`projects/${p.src}`">
+  <div class="imgContainer">
+    <img [src]="p.img" alt="" class="wFull" />
+  </div>
+  <div class="p3">
+    <h3 class="boldText">
+      {{ p.title }}
+    </h3>
+    <span class="mutedText smallText">
+      {{ p.description }}
+    </span>
+  </div>
+  <br />
+</a>

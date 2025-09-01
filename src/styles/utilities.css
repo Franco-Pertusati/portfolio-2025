@@ -3,7 +3,7 @@
   border: solid 1px var(--border);
   border-top: solid 1px var(--highline);
   border-bottom: solid 1px var(--bottomline);
-  background: var(--bg);
+  background: var(--bg-dark);
   padding: 12px;
   border-radius: 12px;
 }
@@ -398,7 +398,8 @@
 }
 
 .mAuto {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .darkContainer {

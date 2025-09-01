@@ -1,0 +1,19 @@
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marqueeItem svg {
+  width: 42px;
+  height: 42px;
+}
+
+.marqueeItem span {
+  font-weight: bold;
+}
+
+.marqueeSection {
+  display: flex;
+  gap: var(--spacing-3);
+}
