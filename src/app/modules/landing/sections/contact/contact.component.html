@@ -9,15 +9,13 @@
       </h1>
     </div>
     <div class="flex gap6 justCenter">
-      <app-button [icon]="'send'" [label]="'Contact'" [style]="'cta'" />
-      <app-button
-        [icon]="'open_in_new'"
-        [label]="'LinkedIn'"
-        [style]="'border'"
-      />
-      <app-button
-        [icon]="'open_in_new'"
-        [label]="'GitHub'"
+      <button class="btn-cta px6 py3" (click)="openDialog()">
+        <span>Contact</span>
+        <i class="material-symbols-rounded">send</i>
+      </button>
+      <app-button (click)="openSocial()"
+        [icon]="'link'"
+        [label]="'Social'"
         [style]="'border'"
       />
     </div>

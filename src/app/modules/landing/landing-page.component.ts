@@ -3,10 +3,12 @@ import { DialogService } from '../../core/services/dialog.service';
 import { ContactComponent } from "./sections/contact/contact.component";
 import { ProjectsComponent } from "./sections/projects/projects.component";
 import { StackComponent } from "./sections/stack/stack.component";
+import { AboutMeComponent } from "./sections/about-me/about-me.component";
+import { FooterComponent } from "./sections/footer/footer.component";
 
 @Component({
   selector: 'app-landing-page',
-  imports: [ContactComponent, ProjectsComponent, StackComponent],
+  imports: [ContactComponent, ProjectsComponent, StackComponent, AboutMeComponent, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })

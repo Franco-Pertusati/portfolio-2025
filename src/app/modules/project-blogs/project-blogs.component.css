@@ -19,7 +19,7 @@
   background-repeat: repeat;
   background-size: 850px;
   background-position: 50% top;
-  mask-image: linear-gradient(0, #000 50%, #0000);
+  mask-image: linear-gradient(0, #000 80%, #0000);
   z-index: -1;
 }
 

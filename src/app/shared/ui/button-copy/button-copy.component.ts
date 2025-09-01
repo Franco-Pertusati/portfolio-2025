@@ -26,7 +26,7 @@ export class ButtonCopyComponent {
 
   copyContent() {
     navigator.clipboard.writeText(this.texToCopy())
-    this.toast.success('Copy to cliboard!')
+    this.toast.success('Copied to the cliboard!')
     this.icon = 'check'
     setTimeout(() => {
       this.icon = 'content_copy'
