@@ -12,5 +12,31 @@ import { ProjectsService } from '../../../../core/services/projects.service';
 })
 export class ProjectsComponent {
   projectsService = inject(ProjectsService)
-  projects: Project[] = this.projectsService.projects
+  projects: Project[] = this.projectsService.getProjects()
+
+  selectedTags: string[] = ['FrontEnd', 'FullStack', 'API']
+  tags: string[] = ['FrontEnd', 'FullStack', 'API']
+
+  isTagSelected(tag: string): boolean {
+    return this.selectedTags.includes(tag);
+  }
+
+  toggleTag(tag: string) {
+    const tagAlreadyIn = this.selectedTags.find(t => t === tag)
+    if (!tagAlreadyIn) {
+      this.selectedTags.push(tag)
+    } else {
+      this.removeTag(tag)
+    }
+  }
+
+  removeTag(tag: string) {
+    this.selectedTags = this.selectedTags.filter(t => t !== tag)
+  }
+
+  toggleAll() {
+    if (this.selectedTags.length != 3) {
+      this.selectedTags = ['FrontEnd', 'FullStack', 'API'];
+    }
+  }
 }
