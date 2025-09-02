@@ -1,12 +1,13 @@
 <div class="navContainer p6 wFull">
   @if (isOpen) {
-
-  <div class="mobileWrapper" (click)="toggleState()"></div>
-
-  <nav class="bgGlass p3 roundedFull wFit mAuto">
+    <div class="mobileWrapper" (click)="toggleState()"></div>
+  }
+  <nav class="bgGlass p3 roundedFull wFit mAuto" [ngClass]="isOpen? 'navBarOpen' : ''">
     <ul class="flex gap6">
       <li><a class="px6 py3" href="#s1" (click)="toggleState()">Contact</a></li>
-      <li><a class="px6 py3" href="#s2" (click)="toggleState()">Projects</a></li>
+      <li>
+        <a class="px6 py3" href="#s2" (click)="toggleState()">Projects</a>
+      </li>
       <li><a class="px6 py3" href="#s3" (click)="toggleState()">AboutMe</a></li>
       <li>
         <button class="px6 py3 btn-filled" (click)="openDownloadOptions()">
@@ -21,7 +22,7 @@
       </li>
     </ul>
   </nav>
-  } @if (!isOpen) {
+  @if (!isOpen) {
   <button class="card outsideMobileButton" (click)="toggleState()">
     <i class="material-symbols-rounded">menu</i>
   </button>

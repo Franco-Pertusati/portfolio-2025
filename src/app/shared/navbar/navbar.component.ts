@@ -3,10 +3,11 @@ import { ThemeToggleBtnComponent } from "../ui/theme-toggle-btn/theme-toggle-btn
 import { DialogService } from '../../core/services/dialog.service';
 import { DownloadCvOptionsComponent } from '../download-cv-options/download-cv-options.component';
 import { ButtonComponent } from "../ui/button/button.component";
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [ThemeToggleBtnComponent, ButtonComponent],
+  imports: [ThemeToggleBtnComponent, ButtonComponent, NgClass],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -22,10 +23,10 @@ export class NavbarComponent {
     this.isOpen = !this.isOpen
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event): void {
-    if (window.innerWidth < 544) {
-      this.isOpen = true
-    }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: Event): void {
+  //   if (window.innerWidth < 544) {
+  //     this.isOpen = true
+  //   }
+  // }
 }

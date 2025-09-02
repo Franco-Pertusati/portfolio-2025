@@ -16,17 +16,25 @@ ul {
   align-items: center;
 }
 
+.outsideMobileButton {
+  display: none;
+}
+
 @media(max-width: 544px) {
+  .outsideMobileButton {
+    display: flex;
+  }
+
   .navContainer {
     left: 0;
     bottom: 0;
   }
 
   nav {
+    transform: translateY(300px);
     width: 100%;
     background-color: var(--bg-dark);
     border-radius: 24px;
-    animation: slideUpBounce 0.45s ease-out forwards;
   }
 
   nav ul {
@@ -37,6 +45,10 @@ ul {
 
   nav ul button {
     width: 100%;
+  }
+
+  .navBarOpen {
+    animation: slideUpBounce 0.45s ease-out forwards;
   }
 
   .toggleTheme {

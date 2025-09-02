@@ -5,8 +5,8 @@
 }
 
 .marqueeItem svg {
-  width: 42px;
-  height: 42px;
+  width: 26px;
+  height: 26px;
 }
 
 .marqueeItem span {
@@ -15,5 +15,7 @@
 
 .marqueeSection {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-3);
 }

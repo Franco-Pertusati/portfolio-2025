@@ -3,7 +3,9 @@ export interface Project {
   description: string,
   stackUsed: string[],
   img: string,
-  src: string,
-  tags: string
+  text: string,
+  tags: string,
+  repo?: string,
+  prev?: string,
   id: number
 }

@@ -14,50 +14,47 @@
     <div>
       <img [src]="selectedProject?.img" alt="" class="wFull" />
       <p class="p6">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
-        nihil totam excepturi neque ullam corporis ducimus fuga necessitatibus
-        nemo, maxime deleniti consectetur commodi officiis aut. Inventore,
-        ipsam! Unde illum dignissimos aspernatur fuga accusamus suscipit dolores
-        harum, impedit animi eaque adipisci, nam, dolor neque. Sapiente
-        consequatur sit velit modi culpa nihil voluptatem fugit unde beatae
-        error laborum ipsum nobis, architecto debitis hic itaque animi iusto
-        consectetur provident quae amet officia ullam consequuntur totam! Culpa
-        minima similique vitae repudiandae inventore error dolorem, deleniti,
-        consequatur aspernatur et debitis ut veritatis, enim eaque reprehenderit
-        quo quasi doloremque voluptatum. Repellat fugiat minima fugit, nam
-        maiores maxime quibusdam accusantium quo atque vero dolorum ex quia
-        beatae optio aut pariatur deserunt voluptate reiciendis? Neque dolorem,
-        eveniet aliquam asperiores suscipit praesentium odio quaerat numquam
-        molestias amet voluptatum id magni cupiditate optio! Iste sapiente
-        placeat in illo excepturi eius, minus libero ratione? Ut, excepturi!
-        Ipsum sit ratione excepturi asperiores fuga laboriosam, dolor nobis,
-        maxime veniam facilis numquam similique? Delectus maxime, nostrum
-        officiis repellendus laborum, voluptatem fugiat reprehenderit facilis
-        assumenda illo itaque iste sit eveniet dignissimos, praesentium
-        doloribus cumque amet ut. Rerum dolores id fugit at. Necessitatibus,
-        eius iusto, dolore, laudantium ipsam ullam deleniti consequatur
-        doloremque eos nihil temporibus adipisci.
+        {{ selectedProject?.text }}
       </p>
+      <div class="flex justCenter gap6 p6">
+        @if (selectedProject?.repo) {
+        <a href="" class="btn-border py3 px6">
+          <span>Repository</span>
+          <i class="material-symbols-rounded">open_in_new</i>
+        </a>
+        } @if (selectedProject?.prev) {
+        <a href="" class="btn-border py3 px6">
+          <span>Preview</span>
+          <i class="material-symbols-rounded">open_in_new</i>
+        </a>
+        }
+      </div>
     </div>
     <div class="bgLight p3 flex flexCol gap3">
+      @if (selectedProject?.repo || selectedProject?.prev) {
       <div class="card wFull flex flexCol gap3">
+        @if (selectedProject?.prev) {
         <a href="" class="wFull justBetween">
           <span>Live Preview</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>
+        } @if (selectedProject?.repo) {
         <a href="" class="wFull justBetween">
           <span>Project Repository</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>
+        }
       </div>
+      }
       <div class="card wFull flex flexCol gap3">
         <span>Tecnologies used in this project:</span>
         <div class="flex gap3 flexWrap">
           @for (t of selectedProject?.stackUsed; track $index) {
-            <span class="tecnologie">{{ t }}</span>
+          <span class="tecnologie">{{ t }}</span>
           }
         </div>
       </div>
     </div>
   </main>
+  <footer></footer>
 </div>
