@@ -18,7 +18,7 @@
 }
 
 .dialogCard {
-  width: 100%;
+  width: calc(100% - 24px);
   padding: 24px;
 }
 

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { DialogService } from '../../core/services/dialog.service';
 import { AuthService } from '../../core/services/auth.service';
 import { ToastService } from '../../core/services/toast.service';
+import { mailerService } from '../../core/services/mailer.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,6 +17,7 @@ export class ContactFormComponent {
   router = inject(Router)
   dialog = inject(DialogService)
   toast = inject(ToastService)
+  mailer = inject(mailerService)
 
   portfolioMessage = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
@@ -34,13 +36,17 @@ export class ContactFormComponent {
 
   async submit(name: string, subject: string, message: string) {
     try {
-      this.dialog.closeDialog()
-      this.toast.success('Message sent successfully.')
-      // Aquí iría la lógica de envío real si aplica
-      console.log({ name, subject, message })
+      await this.mailer.sendMessage({
+        nombre: name,
+        empresa: subject,
+        mensaje: message
+      });
+
+      this.dialog.closeDialog();
+      this.toast.success('Message sent successfully.');
     } catch (error: any) {
-      this.toast.error('A problem occurred while sending the message.')
-      console.error('Error sending message:', error)
+      this.toast.error('A problem occurred while sending the message.');
+      console.error('Error sending message:', error);
     }
   }
 }

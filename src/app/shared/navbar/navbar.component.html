@@ -1,15 +1,29 @@
-<div class="navContainer p6 wFull flex justCenter fixed">
-  <nav class="bgGlass p3 roundedFull">
-    <ul class="flex gap6 itemsCenter">
-      <li><a class="px6 py3" href="#">Contact</a></li>
-      <li><a class="px6 py3" href="#">Projects</a></li>
-      <li><a class="px6 py3" href="#">AboutMe</a></li>
+<div class="navContainer p6 wFull">
+  @if (isOpen) {
+
+  <div class="mobileWrapper" (click)="toggleState()"></div>
+
+  <nav class="bgGlass p3 roundedFull wFit mAuto">
+    <ul class="flex gap6">
+      <li><a class="px6 py3" href="#s1" (click)="toggleState()">Contact</a></li>
+      <li><a class="px6 py3" href="#s2" (click)="toggleState()">Projects</a></li>
+      <li><a class="px6 py3" href="#s3" (click)="toggleState()">AboutMe</a></li>
       <li>
-        <a class="px6 py3 btn-filled" href="#">
+        <button class="px6 py3 btn-filled" (click)="openDownloadOptions()">
           <span> Download CV </span>
-        </a>
+        </button>
       </li>
-      <li><app-theme-toggle-btn /></li>
+      <li class="toggleTheme">
+        <app-theme-toggle-btn />
+        <div class="closeBtn">
+          <app-button [icon]="'close'" (click)="toggleState()" />
+        </div>
+      </li>
     </ul>
   </nav>
+  } @if (!isOpen) {
+  <button class="card outsideMobileButton" (click)="toggleState()">
+    <i class="material-symbols-rounded">menu</i>
+  </button>
+  }
 </div>
