@@ -22,7 +22,7 @@ export class ContactFormComponent {
 
   portfolioMessage = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
-    subject: ['', [Validators.required]], // Añadí el required
+    subject: ['', [Validators.required]],
     text: ['', [Validators.required, Validators.minLength(3)]]
   })
 

@@ -49,12 +49,12 @@
   <div class="flex flexCol gap3">
     <div class="flex gap3 items-center">
       <label for="message">Message</label>
-      @if (portfolioMessage.get('message')?.touched && portfolioMessage.get('message')?.invalid) {
+      @if (portfolioMessage.get('text')?.touched && portfolioMessage.get('text')?.invalid) {
         <span class="errorText smallText">
-          @if (portfolioMessage.get('message')?.errors?.['required']) {
+          @if (portfolioMessage.get('text')?.errors?.['required']) {
             Message is required.
           }
-          @if (portfolioMessage.get('message')?.errors?.['minlength']) {
+          @if (portfolioMessage.get('text')?.errors?.['minlength']) {
             Minimum 3 characters.
           }
         </span>
@@ -64,7 +64,7 @@
       placeholder="Leave a message"
       id="message"
       class="wFull card"
-      formControlName="message"
+      formControlName="text"
       style="resize: none;"
     ></textarea>
   </div>
