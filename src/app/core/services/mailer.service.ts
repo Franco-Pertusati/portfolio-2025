@@ -8,18 +8,18 @@ export class mailerService {
   private apiUrl = 'https://contact-form-node-production.up.railway.app/api/contact/send';
 
 
-  async sendMessage(data: {
-    nombre: string;
-    empresa: string;
-    mensaje: string;
-  }): Promise<any> {
+  async sendMessage(
+    name: string,
+    subject: string,
+    text: string
+  ): Promise<any> {
     try {
       const response = await fetch(this.apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({name, subject, text})
       });
 
       if (!response.ok) {
