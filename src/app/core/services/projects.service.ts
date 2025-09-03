@@ -10,68 +10,35 @@ export class ProjectsService {
       title: 'Linktun: link shortener',
       description: 'A lightweight URL shortener built for individual users and entrepreneurs. It focuses on simplicity and accessibility, with a trial mode to generate links without an account, offering limited features for quick testing.',
       stackUsed: ['Angular 19', 'NodeJs', 'ExpressJS', 'Postgress', 'Prisma'],
-      img: 'projectsImg/Linktun.png',
-      prev: '',
-      repo: '',
+      img: 'projectsImg/LS.png',
+      prev: 'https://franco-pertusati.github.io/Linktun/#/',
+      repo: 'https://github.com/Franco-Pertusati/Linktun',
       text: 'This project is designed for entrepreneurs and individual users who need to shorten links without paying for expensive tools. Unlike most market solutions, which focus on advanced features for marketing teams, this one prioritizes simplicity and accessibility. It also includes a trial mockup that allows users to generate links without creating an account, with limited functionality, so anyone can try the tool before signing up.',
       tags: 'FullStack',
       id: 0
     },
     {
-      title: 'Send Mail with Form',
-      description: 'Incluye facilmente un formulario de contacto en tu web.',
-      stackUsed: ['Angular', 'Js'],
-      img: 'https://i.pinimg.com/1200x/0d/a5/f4/0da5f404dd1ec7e82d5abf7c803c3c9d.jpg',
-      prev: '',
-      repo: '',
-      text: '',
-      tags: 'API',
+      title: 'Growler: Gastronomic System',
+      description: 'Growler is a restaurant management system with table control, sales tracking, staff management, ticket printing, and a PostgreSQL or local storage backend. It streamlines daily operations from order taking to final billing.',
+      stackUsed: ['Angular 19', 'NodeJs', 'ExpressJS', 'Postgress', 'Prisma'],
+      img: 'projectsImg/GS.png',
+      prev: 'https://growler-front.vercel.app/app/dashboard',
+      repo: 'https://github.com/Franco-Pertusati/growler-front',
+      text: 'Growler is a system designed for the comprehensive management of restaurants and gastronomic venues. It allows centralized organization of tables, stock control, and sales tracking. Its features include ticket printing, user authorization levels, a visual floor plan, performance statistics, and staff and shift management. There are two versions: a lightweight one using local storage and a more robust one powered by PostgreSQL. It also supports data export and import through JSON files. In daily use, waiters can record orders, print kitchen receipts, and issue the final bill when closing a table.',
+      tags: 'FullStack',
       id: 1
     },
-    {
-      title: 'Gastronomic System',
-      description: 'Sistema de gestion de local gastronomico.',
-      stackUsed: ['Angular', 'Js'],
-      img: 'https://i.pinimg.com/736x/c6/40/be/c640be330434b29e7f9fbeac449d0b9a.jpg',
-      prev: '',
-      repo: '',
-      text: '',
-      tags: 'FrontEnd',
-      id: 2
-    },
-    {
-      title: 'Linktun: link shortener',
-      description: 'Un acortador de links muy bonito',
-      stackUsed: ['Angular', 'Js'],
-      img: 'https://i.pinimg.com/736x/c1/24/d8/c124d83499bf682963691bd73ec81e94.jpg',
-      prev: '',
-      repo: '',
-      text: '',
-      tags: 'API',
-      id: 3
-    },
-    {
-      title: 'Linktun: link shortener',
-      description: 'Un acortador de links muy bonito',
-      stackUsed: ['Angular', 'Js'],
-      img: 'https://i.pinimg.com/736x/ae/5f/19/ae5f19dc1dced1e51e71e94bf4af82c4.jpg',
-      prev: '',
-      repo: '',
-      text: '',
-      tags: 'FullStack',
-      id: 4
-    },
-    {
-      title: 'Linktun: link shortener',
-      description: 'Un acortador de links muy bonito',
-      stackUsed: ['Angular', 'Js'],
-      img: 'https://i.pinimg.com/1200x/6d/f3/0b/6df30bc05d35324250a01c4fb27b4439.jpg',
-      prev: '',
-      repo: '',
-      text: '',
-      tags: 'FullStack',
-      id: 5
-    }
+    // {
+    //   title: '',
+    //   description: 'Sistema de gestion de local gastronomico.',
+    //   stackUsed: ['Angular', 'Js'],
+    //   img: 'projectsImg/NM.png',
+    //   prev: '',
+    //   repo: '',
+    //   text: '',
+    //   tags: 'API',
+    //   id: 2
+    // },
   ]
 
   getProjects() {
