@@ -6,10 +6,11 @@ import { AuthService } from '../../core/services/auth.service';
 import { ToastService } from '../../core/services/toast.service';
 import { mailerService } from '../../core/services/mailer.service';
 import { text } from 'body-parser';
+import { ButtonCopyComponent } from "../ui/button-copy/button-copy.component";
 
 @Component({
   selector: 'app-contact-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ButtonCopyComponent],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'
 })
