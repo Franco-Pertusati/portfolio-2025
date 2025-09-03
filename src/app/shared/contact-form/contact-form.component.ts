@@ -37,7 +37,7 @@ export class ContactFormComponent {
 
   async submit(name: string, subject: string, text: string) {
     try {
-      await this.mailer.sendMessage(name, subject, text);
+      await this.mailer.sendMessage({name, subject, text});
 
       this.dialog.closeDialog();
       this.toast.success('Message sent successfully.');
