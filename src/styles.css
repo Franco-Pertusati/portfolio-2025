@@ -58,7 +58,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'inter', "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'poppins', "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: var(--font);
   font-size: 62.5%;
   font-weight: normal;

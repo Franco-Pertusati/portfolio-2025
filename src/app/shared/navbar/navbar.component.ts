@@ -14,6 +14,7 @@ import { NgClass } from '@angular/common';
 export class NavbarComponent {
   dialog = inject(DialogService)
   isOpen: boolean = true;
+  isScrolled: boolean = true;
 
   openDownloadOptions() {
     this.dialog.openDialog(DownloadCvOptionsComponent)
@@ -23,10 +24,12 @@ export class NavbarComponent {
     this.isOpen = !this.isOpen
   }
 
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event: Event): void {
-  //   if (window.innerWidth < 544) {
-  //     this.isOpen = true
-  //   }
-  // }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event): void {
+    if (window.scrollY > 80) {
+      this.isScrolled = true;
+    } else {
+      this.isScrolled = false;
+    }
+  }
 }

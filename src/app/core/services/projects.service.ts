@@ -20,7 +20,7 @@ export class ProjectsService {
     {
       title: 'Growler: Gastronomic System',
       description: 'Growler is a restaurant management system with table control, sales tracking, staff management, ticket printing, and a PostgreSQL or local storage backend. It streamlines daily operations from order taking to final billing.',
-      stackUsed: ['Angular 19', 'NodeJs', 'ExpressJS', 'Postgress', 'Prisma'],
+      stackUsed: ['Angular 19', 'NodeJs', 'ExpressJs', 'Postgress', 'Prisma'],
       img: 'projectsImg/GS.png',
       prev: 'https://growler-front.vercel.app/app/dashboard',
       repo: 'https://github.com/Franco-Pertusati/growler-front',
@@ -28,17 +28,17 @@ export class ProjectsService {
       tags: 'FullStack',
       id: 1
     },
-    // {
-    //   title: '',
-    //   description: 'Sistema de gestion de local gastronomico.',
-    //   stackUsed: ['Angular', 'Js'],
-    //   img: 'projectsImg/NM.png',
-    //   prev: '',
-    //   repo: '',
-    //   text: '',
-    //   tags: 'API',
-    //   id: 2
-    // },
+    {
+      title: 'Contact Form API - Node.js + Express',
+      description: 'A lightweight Node.js + Express API that sends emails via Nodemailer, with environment variable security, CORS support, and a ready-to-use contact form endpoint.',
+      stackUsed: ['NodeJs', 'ExpressJs', 'Nodemailer'],
+      img: 'projectsImg/NM.png',
+      prev: '',
+      repo: 'https://github.com/Franco-Pertusati/contact-form-node',
+      text: 'This API provides a simple way to handle contact form submissions. Built with Node.js and Express, it uses Nodemailer to securely send emails. Credentials are managed through environment variables for added protection. It includes CORS support and an endpoint ready to integrate directly with personal or professional websites.',
+      tags: 'API',
+      id: 2
+    },
   ]
 
   getProjects() {
