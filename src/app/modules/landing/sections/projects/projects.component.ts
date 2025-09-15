@@ -6,7 +6,7 @@ import { ProjectsService } from '../../../../core/services/projects.service';
 
 @Component({
   selector: 'app-projects',
-  imports: [ButtonComponent, PorjectCardComponent],
+  imports: [PorjectCardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
@@ -19,6 +19,10 @@ export class ProjectsComponent {
 
   isTagSelected(tag: string): boolean {
     return this.selectedTags.includes(tag);
+  }
+
+  isAllTagsToggled() {
+    return this.selectedTags.length === this.tags.length
   }
 
   toggleTag(tag: string) {

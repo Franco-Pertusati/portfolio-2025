@@ -1,29 +1,7 @@
 <div class="layoutSize card mAuto p0">
-  <div class="flex justBetween itemsCenter topBar p6">
-    <div class="wFull">
-      <h2 class="titleText">Projects</h2>
-    </div>
-    <div class="tagFilter">
-      <div class="filterMore">
-        <app-button [icon]="'filter_list'" [style]="'border'" />
-      </div>
-      <div class="filterBtns flex center gap3">
-        <app-button
-          [icon]="
-            selectedTags.length === 3 ? 'check_box' : 'check_box_outline_blank'
-          "
-          [label]="'All'"
-          (click)="toggleAll()"
-        />
-        @for (b of tags; track $index) {
-        <app-button
-          (click)="toggleTag(b)"
-          [icon]="isTagSelected(b) ? 'check_box' : 'check_box_outline_blank'"
-          [label]="b"
-        />
-        }
-      </div>
-    </div>
+  <div class="flex gap6 itemsCenter topBar p6">
+    <h2 class="titleText">Projects</h2>
+    <span class="mutedText">Some of my main projects</span>
   </div>
   <div class="projectsList">
     @for (p of projects; track $index) { @if (isTagSelected(p.tags) ||

@@ -18,12 +18,12 @@
       </p>
       <div class="flex justCenter gap6 p6">
         @if (selectedProject?.repo) {
-        <a [href]="selectedProject?.repo" class="btn-border py3 px6">
+        <a target="_blank" [href]="selectedProject?.repo" class="btn-border py3 px6">
           <span>Repository</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>
         } @if (selectedProject?.prev) {
-        <a [href]="selectedProject?.prev" class="btn-border py3 px6">
+        <a target="_blank" [href]="selectedProject?.prev" class="btn-border py3 px6">
           <span>Preview</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>
@@ -34,12 +34,12 @@
       @if (selectedProject?.repo || selectedProject?.prev) {
       <div class="card wFull flex flexCol gap3">
         @if (selectedProject?.prev) {
-        <a [href]="selectedProject?.prev" class="wFull justBetween">
+        <a target="_blank" [href]="selectedProject?.prev" class="wFull justBetween">
           <span>Live Preview</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>
         } @if (selectedProject?.repo) {
-        <a [href]="selectedProject?.repo" class="wFull justBetween">
+        <a target="_blank" [href]="selectedProject?.repo" class="wFull justBetween">
           <span>Project Repository</span>
           <i class="material-symbols-rounded">open_in_new</i>
         </a>

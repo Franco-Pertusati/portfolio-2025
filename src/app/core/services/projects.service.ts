@@ -11,8 +11,8 @@ export class ProjectsService {
       description: 'A lightweight URL shortener built for individual users and entrepreneurs. It focuses on simplicity and accessibility, with a trial mode to generate links without an account, offering limited features for quick testing.',
       stackUsed: ['Angular 19', 'NodeJs', 'ExpressJS', 'Postgress', 'Prisma'],
       img: 'projectsImg/LS.png',
-      prev: 'https://franco-pertusati.github.io/Linktun/#/',
-      repo: 'https://github.com/Franco-Pertusati/Linktun',
+      prev: 'https://linktun25.vercel.app/',
+      repo: 'https://github.com/Franco-Pertusati/linktun-api-2025.git',
       text: 'This project is designed for entrepreneurs and individual users who need to shorten links without paying for expensive tools. Unlike most market solutions, which focus on advanced features for marketing teams, this one prioritizes simplicity and accessibility. It also includes a trial mockup that allows users to generate links without creating an account, with limited functionality, so anyone can try the tool before signing up.',
       tags: 'FullStack',
       id: 0
