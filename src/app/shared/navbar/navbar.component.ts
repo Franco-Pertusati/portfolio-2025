@@ -15,6 +15,7 @@ export class NavbarComponent {
   dialog = inject(DialogService)
   isOpen: boolean = true;
   isScrolled: boolean = true;
+  activeSection: string = ''
 
   openDownloadOptions() {
     this.dialog.openDialog(DownloadCvOptionsComponent)
@@ -24,12 +25,24 @@ export class NavbarComponent {
     this.isOpen = !this.isOpen
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: Event): void {
-    if (window.scrollY > 60) {
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const sectionIds = ['contact', 'projects', 'about-me'];
+    let currentSection = '';
+
+    for (let id of sectionIds) {
+      const element = document.getElementById(id);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentSection = id;
+          console.log(currentSection)
+          break;
+        }
+      }
     }
+
+    this.activeSection = currentSection;
+    this.isScrolled = window.scrollY > 10;
   }
 }

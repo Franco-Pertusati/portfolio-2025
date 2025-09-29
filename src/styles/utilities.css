@@ -16,6 +16,14 @@
   border-bottom: solid 1px var(--bottomline);
 }
 
+.border {
+  outline: solid 1px var(--border);
+}
+
+.primaryShadow {
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+
 .bg {
   background-color: var(--bg);
 }
