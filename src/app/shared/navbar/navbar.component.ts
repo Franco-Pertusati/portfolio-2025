@@ -29,6 +29,7 @@ export class NavbarComponent {
   onWindowScroll() {
     const sectionIds = ['contact', 'projects', 'about-me'];
     let currentSection = '';
+    this.isOpen = false
 
     for (let id of sectionIds) {
       const element = document.getElementById(id);

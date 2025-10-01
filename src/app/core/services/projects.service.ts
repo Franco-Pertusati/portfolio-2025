@@ -29,6 +29,17 @@ export class ProjectsService {
       id: 1
     },
     {
+      title: 'Loom: Tailwind Palette Generator',
+      description: `Color palette generator for Tailwind CSS developed in Angular that allows you to create, preview, and export custom color schemes compatible with Tailwind's configuration.`,
+      stackUsed: ['Angular', 'Tailwind', 'LocalStorage'],
+      img: 'projectsImg/PC.png',
+      prev: '',
+      repo: 'https://github.com/Franco-Pertusati/contact-form-node',
+      text: 'This API provides a simple way to handle contact form submissions. Built with Node.js and Express, it uses Nodemailer to securely send emails. Credentials are managed through environment variables for added protection. It includes CORS support and an endpoint ready to integrate directly with personal or professional websites.',
+      tags: 'API',
+      id: 3
+    },
+    {
       title: 'Contact Form API - Node.js + Express',
       description: 'A lightweight Node.js + Express API that sends emails via Nodemailer, with environment variable security, CORS support, and a ready-to-use contact form endpoint.',
       stackUsed: ['NodeJs', 'ExpressJs', 'Nodemailer'],

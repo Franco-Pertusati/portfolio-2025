@@ -5,7 +5,7 @@
 
 :root {
   --bg-dark: hsl(0, 0%, 10%);
-  --bg: hsl(0, 0%, 15%);
+  --bg: hsl(0, 0%, 13%);
   --bg-light: hsl(0, 0%, 20%);
   --border: hsl(0, 0%, 20%);
   --highline: hsl(0, 0%, 24%);
@@ -34,7 +34,7 @@
 
 [data-theme='light'] {
   --bg-dark: hsl(0, 0%, 98%);
-  --bg: hsl(0, 0%, 93%);
+  --bg: hsl(0, 0%, 96%);
   --bg-light: hsl(0, 0%, 88%);
 
   --border: hsl(0, 0%, 85%);
