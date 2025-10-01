@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PDFs a Imágenes</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    canvas {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+    }
+    .pdf-container {
+      margin-bottom: 3rem;
+      border: 2px dashed #ccc;
+      padding: 1rem;
+    }
+    #download-all {
+      display: block;
+      margin: 2rem 0;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Convertir Varios PDFs a Imágenes</h1>
+  <input type="file" id="file-input" accept="application/pdf" multiple />
+
+  <button id="download-all" style="display:none;">📥 Descargar Todas las Imágenes</button>
+
+  <div id="output"></div>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script>
+    const fileInput = document.getElementById('file-input');
+    const output = document.getElementById('output');
+    const downloadAllBtn = document.getElementById('download-all');
+
+    const allImages = []; // { name: 'archivo-pagina.png', dataUrl: '...' }
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+    fileInput.addEventListener('change', async (e) => {
+      const files = Array.from(e.target.files);
+      if (!files.length) return;
+
+      allImages.length = 0; // limpiar
+
+      output.innerHTML = '';
+      downloadAllBtn.style.display = 'none';
+
+      for (const file of files) {
+        if (file.type !== 'application/pdf') continue;
+
+        const container = document.createElement('div');
+        container.className = 'pdf-container';
+        container.innerHTML = `<h3>${file.name}</h3><p>Cargando...</p>`;
+        output.appendChild(container);
+
+        const fileReader = new FileReader();
+
+        fileReader.onload = async function () {
+          const typedarray = new Uint8Array(this.result);
+
+          try {
+            const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
+            container.querySelector('p').textContent = `Páginas: ${pdf.numPages}`;
+
+            const baseName = file.name.replace(/\.pdf$/i, '');
+
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+              const page = await pdf.getPage(pageNum);
+              const scale = 1.5;
+              const viewport = page.getViewport({ scale });
+
+              const canvas = document.createElement('canvas');
+              const context = canvas.getContext('2d');
+              canvas.width = viewport.width;
+              canvas.height = viewport.height;
+
+              await page.render({ canvasContext: context, viewport }).promise;
+
+              container.appendChild(canvas);
+
+              const dataUrl = canvas.toDataURL('image/png');
+              const fileName = `${baseName}/pagina-${pageNum}.png`;
+
+              allImages.push({ name: fileName, dataUrl });
+
+              // Botón individual
+              const downloadLink = document.createElement('a');
+              downloadLink.textContent = `Descargar Página ${pageNum}`;
+              downloadLink.href = dataUrl;
+              downloadLink.download = fileName;
+              downloadLink.style.display = 'inline-block';
+              downloadLink.style.marginBottom = '1rem';
+
+              container.appendChild(downloadLink);
+            }
+
+            // Mostrar botón global si hay imágenes
+            if (allImages.length > 0) {
+              downloadAllBtn.style.display = 'block';
+            }
+
+          } catch (error) {
+            container.innerHTML = `<p style="color:red">Error al procesar ${file.name}: ${error.message}</p>`;
+          }
+        };
+
+        fileReader.readAsArrayBuffer(file);
+      }
+    });
+
+    // Descargar todas las imágenes
+    downloadAllBtn.addEventListener('click', () => {
+      if (allImages.length === 0) return;
+
+      allImages.forEach(({ name, dataUrl }) => {
+        const a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+    });
+  </script>
+
+</body>
+</html>

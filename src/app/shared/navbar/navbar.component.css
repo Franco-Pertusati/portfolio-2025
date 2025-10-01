@@ -4,6 +4,11 @@
   height: fit-content;
 }
 
+/* Ensure container doesn't clip the animated nav on some production builds */
+.navContainer {
+  overflow: visible;
+}
+
 .mobileWrapper {
   display: none;
 }
@@ -36,6 +41,10 @@ ul {
     width: 100%;
     background-color: var(--bg-dark);
     border-radius: 24px;
+    z-index: 110; /* sit above overlays */
+    -webkit-transform: translateY(300px);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
   nav ul {
@@ -50,6 +59,7 @@ ul {
 
   .navBarOpen {
     animation: slideUpBounce 0.45s ease-out forwards;
+    z-index: 120; /* ensure fully on top when open */
   }
 
   .toggleTheme {

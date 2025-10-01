@@ -33,9 +33,11 @@ export class ProjectsService {
       description: `Color palette generator for Tailwind CSS developed in Angular that allows you to create, preview, and export custom color schemes compatible with Tailwind's configuration.`,
       stackUsed: ['Angular', 'Tailwind', 'LocalStorage'],
       img: 'projectsImg/PC.png',
-      prev: '',
-      repo: 'https://github.com/Franco-Pertusati/contact-form-node',
-      text: 'This API provides a simple way to handle contact form submissions. Built with Node.js and Express, it uses Nodemailer to securely send emails. Credentials are managed through environment variables for added protection. It includes CORS support and an endpoint ready to integrate directly with personal or professional websites.',
+      prev: 'https://pallette-check.vercel.app/new-palette',
+      repo: 'https://github.com/Franco-Pertusati/pallette-check.git',
+      text: `It all started with a common frustration: I needed to integrate a custom color into a Tailwind CSS project, but manually creating the full shade scale (from 50 to 950) was tedious and unintuitive. Instead of settling for rough approximations, I decided to dive into how Tailwind’s color scales actually work—and turn that knowledge into a practical tool.
+
+This Angular application solves exactly that problem. Just enter your base color, and the app automatically generates the full shade scale following Tailwind's standards. Best of all, it's highly versatile: you can export the palette in multiple formats depending on your project's needs—plain CSS for traditional projects, a config file for Tailwind CSS v3, or the new format for Tailwind v4.`,
       tags: 'API',
       id: 3
     },

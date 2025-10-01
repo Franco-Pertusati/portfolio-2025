@@ -9,11 +9,11 @@ import { NgClass } from '@angular/common';
   selector: 'app-navbar',
   imports: [ThemeToggleBtnComponent, ButtonComponent, NgClass],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
   dialog = inject(DialogService)
-  isOpen: boolean = true;
+  isOpen: boolean = false;
   isScrolled: boolean = true;
   activeSection: string = ''
 
@@ -37,7 +37,6 @@ export class NavbarComponent {
         const rect = element.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) {
           currentSection = id;
-          console.log(currentSection)
           break;
         }
       }
