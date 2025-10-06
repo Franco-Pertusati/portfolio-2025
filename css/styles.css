@@ -1,0 +1,97 @@
+@import url(utilities.css);
+@import url(normalize.css);
+@import url(page.css);
+
+:root {
+    --bg-light: hsl(0, 0%, 90%);
+    --bg: hsl(0, 0%, 85%);
+    --bg-dark: hsl(0, 0%, 75%);
+
+    --border: hsl(0, 0%, 80%);
+
+    --text: hsl(0, 0%, 15%);
+    --text-muted: hsl(0, 0%, 20%);
+
+    --primary: hsl(216, 100%, 45%);
+    --secondary: #ffbd00;
+
+    --spacing-1: 2px;
+    --spacing-2: 4px;
+    --spacing-3: 6px;
+    --spacing-4: 8px;
+    --spacing-5: 10px;
+    --spacing-6: 12px;
+
+    --red: hsl(355, 78%, 56%);
+    --green: hsl(100, 59%, 56%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    color: var(--font);
+    font-size: 62.5%;
+    font-weight: normal;
+}
+
+body {
+    background-color: var(--bg-light);
+    height: 100vh;
+}
+
+body * {
+    color: var(--text);
+    font-size: 1.8rem;
+}
+
+button,
+a {
+    background-color: transparent;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: var(--spacing-6);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    margin: 0;
+    font-weight: bolder;
+}
+
+input, textarea {
+    padding: var(--spacing-4);
+    background-color: var(--bg-dark);
+    border-style: none;
+    border-radius: var(--spacing-4);
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
